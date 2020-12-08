@@ -1,15 +1,21 @@
 import React from 'react';
 import './App.css';
 import Welcome from './Welcome';
-//import Clock from './Clock';
+import Clock from './Clock';
 import { render } from '@testing-library/react';
 
 
 function App() {
   
     return(
-      <div></div>
-    )
+      <div className="App">
+      <Welcome /> 
+      <Clock />
+      
+     </div>
+     
+   );
+    
   
   
   
