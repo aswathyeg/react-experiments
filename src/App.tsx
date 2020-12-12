@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Welcome from './Welcome';
 import Clock from './Clock';
+import Toggle from './Toggle'
 import { render } from '@testing-library/react';
 
 
@@ -11,7 +12,8 @@ function App() {
       <div className="App">
       <Welcome /> 
       <Clock />
-      
+      <br />
+      <Toggle />
      </div>
      
    );
