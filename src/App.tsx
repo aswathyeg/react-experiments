@@ -4,6 +4,7 @@ import Welcome from './Welcome';
 import Clock from './Clock';
 import Toggle from './Toggle'
 import { render } from '@testing-library/react';
+import ConditionalRendering from './ConditionalRendering';
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
       <Clock />
       <br />
       <Toggle />
+      <br />
+      <ConditionalRendering />
+      
      </div>
      
    );
