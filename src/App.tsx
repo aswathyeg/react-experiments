@@ -5,6 +5,7 @@ import Clock from './Clock';
 import Toggle from './Toggle'
 import { render } from '@testing-library/react';
 import ConditionalRendering from './ConditionalRendering';
+import Calculator from './Calculator';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Toggle />
       <br />
       <ConditionalRendering />
+      <Calculator />
       
      </div>
      
