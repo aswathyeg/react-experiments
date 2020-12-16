@@ -6,20 +6,22 @@ import Toggle from './Toggle'
 import { render } from '@testing-library/react';
 import ConditionalRendering from './ConditionalRendering';
 import Calculator from './Calculator';
+import Login from './Login';
 
 
 function App() {
   
     return(
       <div className="App">
-      <Welcome /> 
+      {/* <Welcome /> 
       <Clock />
       <br />
       <Toggle />
       <br />
       <ConditionalRendering />
-      <Calculator />
-      
+      <Calculator /> */}
+      <br />
+      <Login />
      </div>
      
    );
