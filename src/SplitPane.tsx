@@ -1,13 +1,5 @@
 import React from 'react'
-function Contacts(): JSX.Element{
-    return(
-        <div className="Contacts" />
-    )
-}
-function Chat(): JSX.Element{
-    return <div className="Chat" />;
-}
-   
+import './Styles.css';
 
 function SplitPane(props:any): JSX.Element{
     return(
@@ -21,4 +13,5 @@ function SplitPane(props:any): JSX.Element{
         </div>
     )
 }
+
 export default SplitPane;
