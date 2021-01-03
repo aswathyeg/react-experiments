@@ -1,13 +1,14 @@
-import React, {Component}from 'react'
+import Button from '@material-ui/core/Button/Button';
+import React, { Component } from 'react'
 class Clock extends React.Component {
     timerID: number;
-    constructor(props:any) {
+    constructor(props: any) {
         super(props);
         this.timerID = 0;
     }
     state = {
         date: new Date(),
-        
+
     };
 
     componentDidMount() {
@@ -27,8 +28,8 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
-                
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                <h2>Current time is {this.state.date.toLocaleTimeString()}</h2>
+                <Button variant="contained" color="primary">OK</Button>
             </div>
         );
     }
