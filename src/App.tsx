@@ -10,25 +10,14 @@ import './App.css';
 // import SplitPane from './SplitPane';
 // import Contacts from './Contacts';
 // import Chat from './Chat';
- //import Login from './Login';
- import Hooks from './Hooks';
+ import Login from './Login';
+ //import Hooks from './Hooks';
 
 function App() {
   
     return(
-      <div className="App">
-      {/* <Welcome /> 
-      <Clock />
-      <br />
-      <Toggle />
-      <br />
-     
-      <Calculator /> */}
-      {/* <br />
-      <Login /> */}
-     {/*  <SplitPane left={<Contacts />} right={<Chat />}/> */}
-     {/* <ConditionalRendering /> */}
-     <Hooks />
+      <div className="App">      
+        <Login/>     
      </div>
      
    );
