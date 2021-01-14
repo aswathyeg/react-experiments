@@ -7,8 +7,10 @@ import CardActions from '@material-ui/core/CardActions';
 import CardHeader from '@material-ui/core/CardHeader';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
+import Notlogin from './Notlogin'
+import LoginbuttonRouting from'./LoginbuttonRouting'
 import { BrowserRouter as Router, Link} from 'react-router-dom';
+import Loginbutton from './Loginbutton';
 
 
 
@@ -41,7 +43,7 @@ type State = {
     isButtonDisabled: boolean
     helperText: string
     isError: boolean,
-
+    isAuthenticated:boolean;
     //shouldRedirect:boolean
 };
 
@@ -51,7 +53,7 @@ const initialState: State = {
     isButtonDisabled: true,
     helperText: '',
     isError: false,
-
+    isAuthenticated:true
     // shouldRedirect:false
 };
 
@@ -114,11 +116,14 @@ const LoginForm =()=> {
     const handleLogin = () => {
         if (state.username === 'aeg@email.com' && state.password === '1234') {
           console.log("handlelog 2");
+          state.isAuthenticated=true;
+        //   {state.isAuthenticated===true? <Loginbutton />: <Notlogin />}
         } else {
-          dispatch({
-            type: 'loginFailed',
-            payload: 'Incorrect username or password'
-          });
+            state.isAuthenticated=false;
+        //   dispatch({
+        //     type: 'loginFailed',
+        //     payload: 'Incorrect username or password'
+        //   });
         }
       };
     
@@ -180,14 +185,15 @@ const LoginForm =()=> {
                             </CardContent>
                             <CardActions>
                                 <Button
-                                    component={Link}
-                                    to="/home"
+                                    
                                     variant="contained"
                                     size="large"
                                     color="primary"
                                     className={classes.loginBtn}
                                     onClick={handleLogin}
+                                    {...state.isAuthenticated===true? <Loginbutton />: null} 
                                 >
+                                    
                                     Login
           </Button>
                             </CardActions>
