@@ -1,3 +1,4 @@
+import { Accordion } from '@material-ui/core';
 import React from 'react';
 import './App.css';
 // import Welcome from './Welcome';
@@ -11,13 +12,16 @@ import './App.css';
 // import Contacts from './Contacts';
 // import Chat from './Chat';
  import Login from './Login';
+import SimpleAccordion from './SimpleAccordion';
  //import Hooks from './Hooks';
+ 
 
 function App() {
   
     return(
       <div className="App">      
-        <Login/>     
+        {/* <Login/>      */}
+        <SimpleAccordion />
      </div>
      
    );
