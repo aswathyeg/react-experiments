@@ -11,6 +11,7 @@ import Notlogin from './Notlogin'
 import LoginbuttonRouting from'./LoginbuttonRouting'
 import { BrowserRouter as Router, Link} from 'react-router-dom';
 import Loginbutton from './Loginbutton';
+import Home from './Home';
 
 
 
@@ -113,10 +114,14 @@ const handleLogin = () => {}
 const LoginForm =()=> {
     const classes = useStyles();
 
-    const handleLogin = () => {
+    
+
+    const handleLogin = (props:any) => {
         if (state.username === 'aeg@email.com' && state.password === '1234') {
           console.log("handlelog 2");
           state.isAuthenticated=true;
+          return props.url === Home ?  <div> <Loginbutton /> </div>: null;
+        //   {state.isAuthenticated===true? <Loginbutton />: null} 
         //   {state.isAuthenticated===true? <Loginbutton />: <Notlogin />}
         } else {
             state.isAuthenticated=false;
@@ -130,7 +135,7 @@ const LoginForm =()=> {
     const [state, dispatch] = useReducer(reducer, initialState);  
         const handleKeyPress = (event: React.KeyboardEvent) => {
             if (event.keyCode === 13 || event.which === 13) {
-                state.isButtonDisabled || handleLogin();
+               // state.isButtonDisabled || handleLogin(e);
             }
         };
 
@@ -191,7 +196,7 @@ const LoginForm =()=> {
                                     color="primary"
                                     className={classes.loginBtn}
                                     onClick={handleLogin}
-                                    {...state.isAuthenticated===true? <Loginbutton />: null} 
+                                    
                                 >
                                     
                                     Login
