@@ -10,7 +10,7 @@ interface IPost{
     title: string;
     body: string;
 }
-
+const defaultProps:IPost[]=[];
  function App() {
   
     return(
