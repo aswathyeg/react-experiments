@@ -3,6 +3,13 @@ import React from 'react';
 import './App.css';
  import Login from './Login';
 import SimpleAccordion from './SimpleAccordion';
+import axios from 'axios';
+interface IPost{
+  userId: number;
+    id?: number;
+    title: string;
+    body: string;
+}
 
  function App() {
   
@@ -14,12 +21,6 @@ import SimpleAccordion from './SimpleAccordion';
      
    );
     
-  
-  
-  
-}
-
-
-
+  }
 
 export default App;
