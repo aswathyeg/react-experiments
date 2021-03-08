@@ -5,7 +5,9 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import { Button } from '@material-ui/core';
+import Login from './Login';
+import { useHistory } from 'react-router-dom';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -20,7 +22,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function SimpleAccordion() {
   const classes = useStyles();
-
+  const history = useHistory();
+  const  addUser=()=>{
+   history.push('./login');
+      }
   return (
     <div className={classes.root}>
       <Accordion>
@@ -32,10 +37,11 @@ export default function SimpleAccordion() {
           <Typography className={classes.heading}>Accordion 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          {/* <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
             sit amet blandit leo lobortis eget.
-          </Typography>
+          </Typography> */}
+          <Button onClick={addUser}>Hi</Button>
         </AccordionDetails>
       </Accordion>
       <Accordion>
