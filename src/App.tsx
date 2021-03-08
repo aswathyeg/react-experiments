@@ -1,6 +1,5 @@
 import { Accordion } from '@material-ui/core';
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 // import Welcome from './Welcome';
 // import Clock from './Clock';
@@ -22,26 +21,13 @@ function App() {
     return(
       <div className="App">      
         {/* <Login/>      */}
-        <BrowserRouter>
-     
-
-
-
-     <Switch>
-
-       <Route path="/login" component={Login} />
-
-
-  </Switch>
-
-  
- </BrowserRouter>
-
         <SimpleAccordion />
      </div>
-
      
-  );
+   );
+    
+  
+  
   
 }
 
