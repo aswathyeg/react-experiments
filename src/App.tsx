@@ -10,9 +10,13 @@ interface IPost{
     title: string;
     body: string;
 }
-const defaultProps:IPost[]=[];
+const defaultPosts:IPost[]=[];
+
  function App() {
   
+  const [posts, setPosts]: [IPost[], (posts: IPost[]) => void] = React.useState(defaultPosts);
+  const [loading, setLoading]: [boolean, (loading: boolean) => void] = React.useState<boolean>(true);
+  const [error, setError]: [string, (error: string) => void] = React.useState("");
     return(
       <div className="App">      
         {/* <Login/>      */}
