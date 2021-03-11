@@ -6,22 +6,15 @@ import SimpleAccordion from './SimpleAccordion';
 import axios from 'axios';
 import PersistentDrawerLeft from './PersistentDrawerLeft';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import BlueDatePicker from './BlueDatePicker';
 
 function App() {
 
 
   return (
     <div className="App">
-      <PersistentDrawerLeft />
-      <BrowserRouter>
-
-        
-
-          <Route path="/simpleaccordion" component={SimpleAccordion} />
-          
-            </BrowserRouter>
-          
+      <BlueDatePicker />
+      
     </div>
      
    );
