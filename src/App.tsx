@@ -6,14 +6,14 @@ import SimpleAccordion from './SimpleAccordion';
 import axios from 'axios';
 import PersistentDrawerLeft from './PersistentDrawerLeft';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import BlueDatePicker from './BlueDatePicker';
+import Agestate from './AgeState';
 
 function App() {
 
 
   return (
     <div className="App">
-      <BlueDatePicker />
+      <Agestate />
       
     </div>
      
