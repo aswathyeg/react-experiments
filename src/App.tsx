@@ -7,14 +7,15 @@ import axios from 'axios';
 import PersistentDrawerLeft from './PersistentDrawerLeft';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Agestate from './AgeState';
+import NumberDescriber from './NumberDescriber';
 
 function App() {
 
 
   return (
     <div className="App">
-      <Agestate />
-      
+      {/* <Agestate /> */}
+      <NumberDescriber />
     </div>
      
    );
