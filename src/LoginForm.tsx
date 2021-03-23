@@ -7,8 +7,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardHeader from '@material-ui/core/CardHeader';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
+import Notlogin from './Notlogin'
+import LoginbuttonRouting from'./LoginbuttonRouting'
 import { BrowserRouter as Router, Link} from 'react-router-dom';
+import Loginbutton from './Loginbutton';
+import Home from './Home';
 
 
 
@@ -41,7 +44,7 @@ type State = {
     isButtonDisabled: boolean
     helperText: string
     isError: boolean,
-
+    isAuthenticated:boolean;
     //shouldRedirect:boolean
 };
 
@@ -51,7 +54,7 @@ const initialState: State = {
     isButtonDisabled: true,
     helperText: '',
     isError: false,
-
+    isAuthenticated:true
     // shouldRedirect:false
 };
 
@@ -111,21 +114,28 @@ const handleLogin = () => {}
 const LoginForm =()=> {
     const classes = useStyles();
 
-    const handleLogin = () => {
+    
+
+    const handleLogin = (props:any) => {
         if (state.username === 'aeg@email.com' && state.password === '1234') {
           console.log("handlelog 2");
+          state.isAuthenticated=true;
+          return props.url === Home ?  <div> <Loginbutton /> </div>: null;
+        //   {state.isAuthenticated===true? <Loginbutton />: null} 
+        //   {state.isAuthenticated===true? <Loginbutton />: <Notlogin />}
         } else {
-          dispatch({
-            type: 'loginFailed',
-            payload: 'Incorrect username or password'
-          });
+            state.isAuthenticated=false;
+        //   dispatch({
+        //     type: 'loginFailed',
+        //     payload: 'Incorrect username or password'
+        //   });
         }
       };
     
     const [state, dispatch] = useReducer(reducer, initialState);  
         const handleKeyPress = (event: React.KeyboardEvent) => {
             if (event.keyCode === 13 || event.which === 13) {
-                state.isButtonDisabled || handleLogin();
+               // state.isButtonDisabled || handleLogin(e);
             }
         };
 
@@ -180,14 +190,15 @@ const LoginForm =()=> {
                             </CardContent>
                             <CardActions>
                                 <Button
-                                    component={Link}
-                                    to="/home"
+                                    
                                     variant="contained"
                                     size="large"
                                     color="primary"
                                     className={classes.loginBtn}
                                     onClick={handleLogin}
+                                    
                                 >
+                                    
                                     Login
           </Button>
                             </CardActions>

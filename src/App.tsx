@@ -1,33 +1,25 @@
+import { Accordion } from '@material-ui/core';
 import React from 'react';
 import './App.css';
-// import Welcome from './Welcome';
-// import Clock from './Clock';
-// import Toggle from './Toggle'
-// import { render } from '@testing-library/react';
-//import ConditionalRendering from './ConditionalRendering';
-// import Calculator from './Calculator';
-// import Login from './Login';
-// import SplitPane from './SplitPane';
-// import Contacts from './Contacts';
-// import Chat from './Chat';
- import Login from './Login';
- //import Hooks from './Hooks';
+import Login from './Login';
+import SimpleAccordion from './SimpleAccordion';
+import axios from 'axios';
+import PersistentDrawerLeft from './PersistentDrawerLeft';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Agestate from './AgeState';
+import NumberDescriber from './NumberDescriber';
 
 function App() {
-  
-    return(
-      <div className="App">      
-        <Login/>     
-     </div>
+
+
+  return (
+    <div className="App">
+      {/* <Agestate /> */}
+      <NumberDescriber />
+    </div>
      
    );
     
   
-  
-  
-}
-
-
-
-
+    }
 export default App;
