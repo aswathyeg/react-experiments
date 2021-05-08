@@ -21,12 +21,27 @@ render(){
 <button type='button'
 onClick={()=>{
 
-    this.setState((precState))
-}
+    this.setState((prevState)=>({ isOpen: !prevState.isOpen})
+    
+    )
+}}
 >
     
     BOOKS</button>
-    <div style={{display:isOpen?'block':'none'}}></div>
+    <div style={{display:this.state.isOpen?'block':'none'}}>
+
+        <ul>
+            <li>
+Book 1
+
+            </li>
+            <li>
+Book 2
+
+            </li>
+            
+        </ul>
+    </div>
 </div> 
 
     );
