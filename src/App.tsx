@@ -11,6 +11,7 @@ import NumberDescriber from './NumberDescriber';
 //import Hello from './Hello';
 //import BookList from './BookList'
 import FunctionComponent from './FunctionComponent';
+import FunctionalComponent from './FunctionalComponent';
  
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <FunctionComponent />
+      <FunctionalComponent />
     </div>
      
    );
