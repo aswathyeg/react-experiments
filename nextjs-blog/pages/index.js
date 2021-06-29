@@ -15,10 +15,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className="title">
-         Read{''}
-         <link href="/posts/first-post">
-         <a>this page</a>
-         </link>
+         Read{' '}
+         <Link href="/posts/first-post">
+         <a>this page!</a>
+         </Link>
         </h1>
 
         <p className={styles.description}>
