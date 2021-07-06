@@ -9,18 +9,22 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Agestate from './AgeState';
 import NumberDescriber from './NumberDescriber';
 //import Hello from './Hello';
-//import BookList from './BookList'
-import FunctionComponent from './FunctionComponent';
-import FunctionalComponent from './FunctionalComponent';
-import StudentDetails from './ClassComponent';
- 
+
+import BookList from './BookList'
+import NoErrorBoundaries from './NoErrorBoundaries';
+import IncrementDecrement from './IncrementDecrement';
+
+
 
 function App() {
 
 
   return (
     <div className="App">
-      <StudentDetails />
+
+      
+  <IncrementDecrement />
+
     </div>
      
    );
