@@ -14,6 +14,7 @@ import BookList from './BookList'
 import NoErrorBoundaries from './NoErrorBoundaries';
 import IncrementDecrementClass from './IncrementDecrementClass';
 import IncrementDecrementFunction from './IncrementDecrementFunction';
+import ColorClass from './ColorClass';
 
 
 
@@ -24,7 +25,7 @@ function App() {
     <div className="App">
 
       
-  <IncrementDecrementClass />
+  <ColorClass />
 
     </div>
      
