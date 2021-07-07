@@ -12,7 +12,8 @@ import NumberDescriber from './NumberDescriber';
 
 import BookList from './BookList'
 import NoErrorBoundaries from './NoErrorBoundaries';
-import IncrementDecrement from './IncrementDecrement';
+import IncrementDecrementClass from './IncrementDecrementClass';
+import IncrementDecrementFunction from './IncrementDecrementFunction';
 
 
 
@@ -23,7 +24,7 @@ function App() {
     <div className="App">
 
       
-  <IncrementDecrement />
+  <IncrementDecrementClass />
 
     </div>
      
