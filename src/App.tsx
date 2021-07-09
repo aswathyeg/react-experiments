@@ -15,6 +15,8 @@ import NoErrorBoundaries from './NoErrorBoundaries';
 import IncrementDecrementClass from './IncrementDecrementClass';
 import IncrementDecrementFunction from './IncrementDecrementFunction';
 import ColorClass from './ColorClass';
+import ChildComponent from './ChildComponent';
+import ParentComponent from './ParentComponent';
 
 
 
@@ -25,7 +27,7 @@ function App() {
     <div className="App">
 
       
-  <ColorClass />
+  < ParentComponent/>
 
     </div>
      
