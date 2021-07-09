@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ChildComponent from './ChildComponent'
 
-function ParentComponent(props:any){
+function ParentComponent(){
 let[counter,setCounter]=useState(0);
 const press=()=>{
     setCounter(++counter)

@@ -1,5 +1,4 @@
-import React from 'react';
-import ParentComponent from './ParentComponent'
+
 function ChildComponent(props:any){
     return(
         <div>
