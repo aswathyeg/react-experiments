@@ -17,6 +17,7 @@ import IncrementDecrementFunction from './IncrementDecrementFunction';
 import ColorClass from './ColorClass';
 import ChildComponent from './ChildComponent';
 import ParentComponent from './ParentComponent';
+import ParentData from './ParentData';
 
 
 
@@ -27,7 +28,7 @@ function App() {
     <div className="App">
 
       
-  < ParentComponent/>
+  < ParentData/>
 
     </div>
      
