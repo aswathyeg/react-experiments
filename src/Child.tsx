@@ -16,11 +16,11 @@ class Child extends React.Component<Props, State>{
             message: "This is Vivek"
         };
     }
-    // shouldComponentUpdate(){
-    //     console.log("Does not getting rendered")
-    //     return false;
+    shouldComponentUpdate(){
+        console.log("Does not getting rendered")
+        return false;
 
-    // } //Prevent re-renders 
+    } //Prevent re-renders 
     render() {
         console.log("Child is getting rendered")
         return (
