@@ -23,7 +23,7 @@ function Counter (){
         <>
         Count:{state.count}
         <button onClick={()=>dispatch({type:'decrement',payload:'5'})}>-</button>
-        <button onClick={()=>dispatch({type:'increment',payload:5})}>-</button>
+        <button onClick={()=>dispatch({type:'increment',payload:5})}>+</button>
         </>
     );
 }
