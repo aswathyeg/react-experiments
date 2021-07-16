@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-function Counting(props: any) {
+function Counting() {
     let [count, setCount] = useState(0);
 
     const increment = () => {
