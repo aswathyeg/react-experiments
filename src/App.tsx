@@ -31,7 +31,7 @@ function App() {
     <div className="App">
 
       
-  < Addition/>
+  < IncrementDecrementClass/>
 
     </div>
      

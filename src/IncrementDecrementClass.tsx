@@ -41,7 +41,7 @@ class IncrementDecrementClass extends React.Component<Props, State>{
         return (
             <div>
                 <p>Current Value:{this.state.count}</p>
-                <button onClick={this.increment}>Increment</button>
+                <button onClick={this.increment}>Increment</button>&nbsp;&nbsp;&nbsp;
                 <button onClick={this.decrement}>Decrement</button>
             </div>
         )
