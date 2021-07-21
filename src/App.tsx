@@ -21,7 +21,8 @@ import ParentData from './ParentData';
 import Parent from './Parent';
 import Counter from './useHooks/Counter';
 import Addition from './Addition';
-
+import Provider from "./contextApI/Provider";
+import Building from './contextApI/Building';
 
 
 function App() {
@@ -31,7 +32,9 @@ function App() {
     <div className="App">
 
       
-  < IncrementDecrementClass/>
+<Provider>
+        <Building />
+      </Provider>
 
     </div>
      
