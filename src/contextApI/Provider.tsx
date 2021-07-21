@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PackageContext from "./context";
 
-const provider = (props:any) => {
+const Provider = (props:any) => {
   const [state, setState] = useState({
     companyName: "DHL Delivery Package",
     recipientName: "Mr John Doe",
@@ -23,4 +23,4 @@ const provider = (props:any) => {
   );
 };
 
-export default provider;
+export default Provider;
