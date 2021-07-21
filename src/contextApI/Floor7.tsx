@@ -1,6 +1,4 @@
 import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
-import Provider from "./Provider";
 import Context from "./context";
 //import "./styles.css";
 
