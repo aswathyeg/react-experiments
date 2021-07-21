@@ -19,11 +19,19 @@ function reducer(state:typeof initialState,action: ACTIONTYPE ){
 
 function Counter (){
     const [state,dispatch]=React.useReducer(reducer,initialState);
+
+    const substract=()=>{
+      dispatch({type:'decrement',payload:'5'})
+    }   
+    const add=()=>{
+      dispatch({type:'increment',payload:5})
+    }   
+    
     return(
         <>
         Count:{state.count}
-        <button onClick={()=>dispatch({type:'decrement',payload:'5'})}>-</button>
-        <button onClick={()=>dispatch({type:'increment',payload:5})}>+</button>
+        <button onClick={substract}>-</button>
+        <button onClick={add}>+</button>
         </>
     );
 }

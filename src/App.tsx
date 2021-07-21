@@ -20,6 +20,7 @@ import ParentComponent from './ParentComponent';
 import ParentData from './ParentData';
 import Parent from './Parent';
 import Counter from './useHooks/Counter';
+import Addition from './Addition';
 
 
 
@@ -30,7 +31,7 @@ function App() {
     <div className="App">
 
       
-  < Counter/>
+  < Addition/>
 
     </div>
      
