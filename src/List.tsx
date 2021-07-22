@@ -37,7 +37,14 @@ function ListExample(){
 <h1>List of courses</h1>
 <hr/>
 {courses.map(function(course){
-    return <div key ={course.id}> {course.title}</div>
+    return <div key ={course.id}> {course.title}
+   <span> {course.author}</span>
+   <span><a href={course.url} ><h4>{course.title}</h4></a>
+   </span>
+    
+    
+    </div>
+
 })}
         </div>
     )
