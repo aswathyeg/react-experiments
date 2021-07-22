@@ -23,6 +23,7 @@ import Counter from './useHooks/Counter';
 import Addition from './Addition';
 import Provider from "./contextApI/Provider";
 import Building from './contextApI/Building';
+import ListExample from './List';
 
 
 function App() {
@@ -32,9 +33,10 @@ function App() {
     <div className="App">
 
       
-<Provider>
+{/* <Provider>
         <Building />
-      </Provider>
+      </Provider> */}
+      <ListExample />
 
     </div>
      
