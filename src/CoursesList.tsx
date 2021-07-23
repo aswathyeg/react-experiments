@@ -1,5 +1,4 @@
 import React from 'react';
-
 function CoursesList(props:any) {
     return props.courses.map(function(course:any) {
       return (
