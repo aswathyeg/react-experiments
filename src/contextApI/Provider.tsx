@@ -1,3 +1,7 @@
+
+
+//Example to contextAPI.Using to avoid prop drilling. And to store common data in a common file
+
 import React, { useState } from "react";
 import PackageContext from "./context";
 
