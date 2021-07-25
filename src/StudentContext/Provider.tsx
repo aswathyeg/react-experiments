@@ -1,22 +1,29 @@
 import React,{useState} from 'react';
-import ClassProvider from './Context'
-const Provider=()=>{
+import PackageContext from './context';
+
+const Provider=(props:any)=>{
     const[state,setState]=useState({
         name:"John",
-        age:6,
-        phone:874286
+        age:"a",
+        phone:"b",
+        isPresent: "waiting till 9am"
 
     });
     return(
 
-<ClassProvider.Provider
+<PackageContext.Provider
 
 value={{
     data:state,
-    
+    updateDetails: () => {
+        setState({ ...state, isPresent: "Present" });
+    }
+
 }}
 
-        ></ClassProvider.Provider>
+        >
+             {props.children}
+        </PackageContext.Provider>
     )
 }
 export default Provider;
