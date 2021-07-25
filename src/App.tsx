@@ -1,8 +1,8 @@
 
 // list and props example
-import  School from './StudentContext/School';
+
 import React from 'react';
-import Provider from './StudentContext/Provider';
+import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
 // import CoursesList from './CoursesList';
 
@@ -42,7 +42,7 @@ function App() {
       
       
       <Provider>
-      <School />
+      <Building/>
       </Provider>
     </div>
   );
