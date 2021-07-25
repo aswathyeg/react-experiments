@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import Context from "./context";
+import context from "./context";
 //import "./styles.css";
 
 function Floor7() {
     return (
-        <Context.Consumer>
+        <context.Consumer>
             {context => (
                 <Fragment>PackageContext
                     <p>
@@ -25,7 +25,7 @@ function Floor7() {
                 </Fragment>
             )}
 
-        </Context.Consumer>
+        </context.Consumer>
     )
 
 }
