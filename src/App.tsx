@@ -1,42 +1,52 @@
-import { Accordion } from '@material-ui/core';
+
+// list and props example
+
 import React from 'react';
-import './App.css';
-import Login from './Login';
-import SimpleAccordion from './SimpleAccordion';
-import axios from 'axios';
-import PersistentDrawerLeft from './PersistentDrawerLeft';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Agestate from './AgeState';
-import NumberDescriber from './NumberDescriber';
-//import Hello from './Hello';
+import Provider from './contextApI/Provider';
+import Building from './contextApI/Building';
+// import CoursesList from './CoursesList';
 
-import BookList from './BookList'
-import NoErrorBoundaries from './NoErrorBoundaries';
-import IncrementDecrementClass from './IncrementDecrementClass';
-import IncrementDecrementFunction from './IncrementDecrementFunction';
-import ColorClass from './ColorClass';
-import ChildComponent from './ChildComponent';
-import ParentComponent from './ParentComponent';
-import ParentData from './ParentData';
-import Parent from './Parent';
-import Counter from './useHooks/Counter';
-import Addition from './Addition';
-
-
+// const courses = [
+//   {
+//     id: 1,
+//     title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
+//     author: "Maximilian Schwarzmülller",
+//     hours_video: 40.5,
+//     number_of_lectures: 490,
+//     rating: 4.6,
+//     url: "https://codingthesmartway.com/courses/react-complete-guide/"
+//   },
+//   {
+//     id: 2,
+//     title: "Modern React with Redux",
+//     author: "Stephen Grider",
+//     hours_video: 47.5,
+//     number_of_lectures: 488,
+//     rating: 4.6,
+//     url: "https://codingthesmartway.com/courses/modern-react-with-redux/"
+//   },
+  // {
+  //   id: 3,
+  //   title: "The Complete React Developer Course (w/ Hooks and Redux)",
+  //   author: "Andrew Mead",
+  //   hours_video: 39,
+  //   number_of_lectures: 200,
+  //   rating: 4.7,
+  //   url: "http://codingthesmartway.net/courses/complete-react-web-app-developer/"
+  // }
+//];
 
 function App() {
-
-
   return (
     <div className="App">
-
       
-  < Addition/>
-
+      
+      <Provider>
+      <Building/>
+      </Provider>
     </div>
-     
-   );
-    
-  
-    }
+  );
+}
+
+//const rootElement = document.getElementById("root");
 export default App;
