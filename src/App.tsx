@@ -4,6 +4,8 @@ import LastFloor from './Reducer/LastFloor';
 import React from 'react';
 import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
+
+
 // import CoursesList from './CoursesList';
 
 // const courses = [
@@ -39,7 +41,7 @@ import Building from './contextApI/Building';
 function App() {
   return (
     <div className="App">
-      <LastFloor />
+      <Building />
       
 {/*       
       <Provider>
