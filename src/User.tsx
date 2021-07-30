@@ -3,7 +3,7 @@ interface IUserOwnProps{ //I + ComponentName + DescriptiveUsage = Interface Name
     username:string|undefined,
     userType:'admin' | 'moderator' | 'user' | 'guest';
 }
-function User<IUserOwnProps> () {
+const User:React.FC<IUserOwnProps>= ({username,userType}) =>{
     return (
         <div className="App">
           Hi
@@ -13,4 +13,4 @@ function User<IUserOwnProps> () {
 }
 
 
-export default User;
+export default User; 
