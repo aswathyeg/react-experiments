@@ -4,6 +4,7 @@ import LastFloor from './Reducer/LastFloor';
 import React from 'react';
 import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
+import User from './User';
 
 
 // import CoursesList from './CoursesList';
@@ -43,10 +44,10 @@ function App() {
     <div className="App">
      
       
-      
-      <Provider>
+      <User  userType='admin' username='h4x0r'/>
+      {/* <Provider>
       <Building/>
-      </Provider> 
+      </Provider>  */}
     </div>
   );
 }
