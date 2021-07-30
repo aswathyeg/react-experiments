@@ -6,7 +6,7 @@ interface IUserOwnProps{ //I + ComponentName + DescriptiveUsage = Interface Name
 }
 
 const User:React.FC<IUserOwnProps>= ({username,userType}): JSX.Element =>{
-  const[time,setTime]=useState<Date>(()=>new Date(Date.now()))
+  const[time,setTime]=useState<Date>(()=>new Date(Date.now())) //added useState
     return (
         <div className="App">
           Hi, {username ? username : 'Mysterious Entity'}, your user type is 
