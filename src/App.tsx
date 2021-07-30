@@ -1,9 +1,12 @@
 
 // list and props example
-
+import LastFloor from './Reducer/LastFloor';
 import React from 'react';
 import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
+import User from './User';
+
+
 // import CoursesList from './CoursesList';
 
 // const courses = [
@@ -39,11 +42,12 @@ import Building from './contextApI/Building';
 function App() {
   return (
     <div className="App">
+     
       
-      
-      <Provider>
+      <User  userType='admin' username='h4x0r'/>
+      {/* <Provider>
       <Building/>
-      </Provider>
+      </Provider>  */}
     </div>
   );
 }

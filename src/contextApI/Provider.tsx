@@ -2,11 +2,12 @@
 
 //Example to contextAPI.Using to avoid prop drilling. And to store common data in a common file
 
+
 import React, { useState } from "react";
 import PackageContext from "./context";
 
 const Provider = (props:any) => {
-  const [state, setState] = useState({
+  const [state, setState] = useState({  //useState
     companyName: "DHL Delivery Package",
     recipientName: "Mr John Doe",
     package: "MacBook Pro retina Display (20Kg)",
