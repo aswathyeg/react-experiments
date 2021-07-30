@@ -39,7 +39,7 @@ const User: React.FC<IUserOwnProps> = ({ userType, username }): JSX.Element => {
 
           </input>
           Your message: {message}
-          <br></br>
+          <br></br> <br></br>
           <Link to='/UserList'> User List</Link>
         </div>
       );
