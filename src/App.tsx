@@ -5,6 +5,9 @@ import React from 'react';
 import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
 import User from './UserApp/User';
+import { BrowserRouter, Route ,Switch} from 'react-router-dom';
+import { UserList } from './UserApp/UserList';
+
 
 
 // import CoursesList from './CoursesList';
@@ -42,9 +45,20 @@ import User from './UserApp/User';
 function App() {
   return (
     <div className="App">
+     <BrowserRouter>
+     <Switch>
+       <Route exact path='/'
+      render={(props) => <User userType='admin' username='h4x0r' {...props} />}
+      />
+     </Switch>
+     <Switch>
+       <Route exact path='/UserList'
+        render={(props) => <UserList {...props} />}
+       />
+     </Switch>
      
-      
-      <User  userType='admin' username='h4x0r'/>
+     
+      </BrowserRouter>
       {/* <Provider>
       <Building/>
       </Provider>  */}
