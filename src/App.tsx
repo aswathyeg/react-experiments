@@ -41,12 +41,12 @@ import Building from './contextApI/Building';
 function App() {
   return (
     <div className="App">
-      <Building />
+     
       
-{/*       
+      
       <Provider>
       <Building/>
-      </Provider> */}
+      </Provider> 
     </div>
   );
 }
