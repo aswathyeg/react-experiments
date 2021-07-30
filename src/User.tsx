@@ -6,7 +6,7 @@ interface IUserOwnProps{ //I + ComponentName + DescriptiveUsage = Interface Name
 const User:React.FC<IUserOwnProps>= ({username,userType}): JSX.Element =>{
     return (
         <div className="App">
-          Hi
+          Hi, {username ? username : 'Mysterious Entity'}, your user type is {username ? userType : 'irrelevant because I do not know you'}.
         </div>
       );
     
