@@ -4,7 +4,7 @@ import LastFloor from './Reducer/LastFloor';
 import React from 'react';
 import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
-import User from './User';
+import User from './UserApp/User';
 
 
 // import CoursesList from './CoursesList';
