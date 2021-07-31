@@ -6,7 +6,7 @@ interface IUserOwnProps{ //I + ComponentName + DescriptiveUsage = Interface Name
     userType:'admin' | 'moderator' | 'user' | 'guest';
 }
 
-const User: React.FC<IUserOwnProps> = ({ userType, username }): JSX.Element => {
+const UserDetails: React.FC<IUserOwnProps> = ({ userType, username }): JSX.Element => {
   const [time, setTime] = useState<Date>(() => new Date(Date.now()));
   const [message, setMessage] = useState<string>('');
 
@@ -47,4 +47,4 @@ const User: React.FC<IUserOwnProps> = ({ userType, username }): JSX.Element => {
 }
 
 
-export default User; 
+export default UserDetails;

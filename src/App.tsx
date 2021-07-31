@@ -4,7 +4,7 @@ import LastFloor from './Reducer/LastFloor';
 import React from 'react';
 import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
-import User from './UserApp/User';
+import UserDetails from './UserApp/UserDetails';
 import { BrowserRouter, Route ,Switch} from 'react-router-dom';
 import { UserList } from './UserApp/UserList';
 
@@ -48,7 +48,7 @@ function App() {
      <BrowserRouter>
      <Switch>
        <Route exact path='/'
-      render={(props) => <User userType='admin' username='h4x0r' {...props} />}
+      render={(props) => <UserDetails userType='admin' username='h4x0r' {...props} />}
       />
      </Switch>
      <Switch>
