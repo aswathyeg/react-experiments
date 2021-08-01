@@ -16,4 +16,5 @@ interface ISaveUserMessageAction{
     payload:IUser
     
 }
-export type IUserActionTypes=ISaveUserNameAction|ISaveUserMessageAction;
+export type IUserActionTypes=ISaveUserNameAction|ISaveUserMessageAction; //discriminated action allows to create a single
+                                                                         // type that can represent multiple type
