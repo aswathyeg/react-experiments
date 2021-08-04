@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {
     IUser,
     UserActions,
@@ -9,20 +9,20 @@ const INITIAL_STATE: IUser = {
     userMessage: undefined,
 }
 
-export function  userReducer(prevState:IUser=INITIAL_STATE,action:IUserActionTypes) {
-    switch(action.type){
-    case UserActions.SAVE_USERNAME :
-        return{
-            ...prevState,
-            username:action.payload.username
-        }
-        case UserActions.SAVE_USER_MESSAGE :
-        return{
-            ...prevState,
-            userMessage:action.payload.userMessage
-        }
+export function userReducer(prevState: IUser = INITIAL_STATE, action: IUserActionTypes) {
+    switch (action.type) {
+        case UserActions.SAVE_USERNAME:
+            return {
+                ...prevState,
+                username: action.payload.username
+            }
+        case UserActions.SAVE_USER_MESSAGE:
+            return {
+                ...prevState,
+                userMessage: action.payload.userMessage
+            }
         default:
-            return prevState
+            return prevState;
     }
-    
+
 }
