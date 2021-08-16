@@ -7,6 +7,7 @@ import Building from './contextApI/Building';
 import UserDetails from './UserApp/UserDetails';
 import { BrowserRouter, Route ,Switch} from 'react-router-dom';
 import { UserList } from './UserApp/UserList';
+import LoginHere from './LoginHere';
 
 
 
@@ -44,25 +45,9 @@ import { UserList } from './UserApp/UserList';
 
 function App() {
   return (
-    <div className="App">
-     <BrowserRouter>
-     <Switch>
-       <Route exact path='/'
-      render={(props) => <UserDetails userType='admin' username='h4x0r' {...props} />}
-      />
-     </Switch>
-     <Switch>
-       <Route exact path='/UserList'
-        render={(props) => <UserList {...props} />}
-       />
-     </Switch>
-     
-     
-      </BrowserRouter>
-      {/* <Provider>
-      <Building/>
-      </Provider>  */}
-    </div>
+    <div>
+   <LoginHere />
+     </div>
   );
 }
 
