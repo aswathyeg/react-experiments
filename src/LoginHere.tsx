@@ -1,9 +1,20 @@
 import React from "react";
-import { MDBInput } from "mdbreact";
+import { MDBBtn,MDBInput } from "mdbreact";
 
 const InputPage = () => {
-  return (
+ const  handleclick=()=>{
+
+  }
+  return (<div>
+   
+    <MDBInput label="Username" outline icon="envelope" />
+    
+    
     <MDBInput label="E-mail address" outline icon="envelope" />
+    <MDBBtn onClick={handleclick} >Submit</MDBBtn>
+    
+    </div>
+    
   );
 }
 
