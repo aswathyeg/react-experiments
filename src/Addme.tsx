@@ -1,4 +1,5 @@
 
+import { Button } from '@material-ui/core';
 import React, { useState } from 'react';
 function AddMe(){
 
@@ -11,15 +12,17 @@ function AddMe(){
         setCount(--count)
     }
    const fetchData=()=>{
-       
+
 
     }
 return(
     <div>
-       <p> Current number:{count}</p>
-    <button onClick={increment}> increment</button>
-    <button onClick={decrement}> decrement</button>
-    <button onClick={fetchData}>fetchData</button>
+       <Button> Current number:{count}</Button>
+       <br></br>
+    <Button onClick={increment}> increment</Button>
+    <Button onClick={decrement}> decrement</Button>
+    <Button onClick={fetchData}>fetchData</Button>
+    
     </div>
 )
 }
