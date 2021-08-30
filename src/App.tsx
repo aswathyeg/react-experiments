@@ -10,6 +10,7 @@ import { UserList } from './UserApp/UserList';
 import LoginHere from './LoginHere';
 import AddMe from './Addme';
 import AddMeClass from './AddMeClass';
+import Addme from './Addme';
 
 
 
@@ -48,7 +49,7 @@ import AddMeClass from './AddMeClass';
 function App() {
   return (
     <div>
-   <AddMeClass />
+   <Addme />
      </div>
   );
 }
