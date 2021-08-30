@@ -8,6 +8,8 @@ import UserDetails from './UserApp/UserDetails';
 import { BrowserRouter, Route ,Switch} from 'react-router-dom';
 import { UserList } from './UserApp/UserList';
 import LoginHere from './LoginHere';
+import AddMe from './Addme';
+import AddMeClass from './AddMeClass';
 
 
 
@@ -46,7 +48,7 @@ import LoginHere from './LoginHere';
 function App() {
   return (
     <div>
-   <LoginHere />
+   <AddMeClass />
      </div>
   );
 }
