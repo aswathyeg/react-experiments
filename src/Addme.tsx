@@ -1,7 +1,7 @@
 
 import { Button } from '@material-ui/core';
-import React, { useState } from 'react';
-import 'axios' ;
+import React, { useState ,useEffect} from 'react';
+import 'axios';
 function AddMe(){
     const axios = require('axios').default;//for intellisence
 
@@ -12,7 +12,15 @@ function AddMe(){
     //   });
 
       
-
+const fetchData=()=>{
+    return axios.get('http://localhost:3000')
+.then ((res)=>{
+    console.log(res);
+})
+.catch((err)=>{
+    console.error(err)
+})
+}
     let [count,setCount]=useState(0);
     const increment=()=>{
         setCount(++count)
@@ -22,6 +30,11 @@ function AddMe(){
     const decrement=()=>{
         setCount(--count)
     }
+useEffect(()=>{
+    fetchData();
+
+},[])
+
 
     
 return(
