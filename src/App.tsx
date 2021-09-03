@@ -11,6 +11,7 @@ import LoginHere from './LoginHere';
 import AddMe from './Addme';
 import AddMeClass from './AddMeClass';
 import Addme from './Addme';
+import PropsState from './PropsState';
 
 
 
@@ -49,7 +50,7 @@ import Addme from './Addme';
 function App() {
   return (
     <div>
-   <Addme />
+   <PropsState/>
      </div>
   );
 }
