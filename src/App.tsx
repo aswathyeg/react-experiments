@@ -12,6 +12,10 @@ import AddMe from './Addme';
 import AddMeClass from './AddMeClass';
 import Addme from './Addme';
 import PropsState from './PropsState';
+import LiftStateUp from './LiftStateUp';
+import ControlledUncontrolled from './TemperatureInput';
+import TemperatureInput from './TemperatureInput';
+import Home from './TemperatureInput';
 
 
 
@@ -50,9 +54,10 @@ import PropsState from './PropsState';
 function App() {
   return (
     <div>
-   <PropsState/>
+   <Home/>
+   
      </div>
-  );
+  )
 }
 
 //const rootElement = document.getElementById("root");
