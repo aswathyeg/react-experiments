@@ -13,9 +13,11 @@ import AddMeClass from './AddMeClass';
 import Addme from './Addme';
 import PropsState from './PropsState';
 import LiftStateUp from './LiftStateUp';
-import ControlledUncontrolled from './TemperatureInput';
-import TemperatureInput from './TemperatureInput';
-import Home from './TemperatureInput';
+import ControlledUncontrolled from './Homee';
+//import TemperatureInput from './Homee';
+//import Home from './Homee';
+import Homee from './Homee';
+import Refs from './Refs';
 
 
 
@@ -54,7 +56,7 @@ import Home from './TemperatureInput';
 function App() {
   return (
     <div>
-   <Home/>
+   <Refs/>
    
      </div>
   )
