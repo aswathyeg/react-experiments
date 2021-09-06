@@ -16,7 +16,7 @@ container:{
 display:'flex',
 flexWrap: 'wrap',
 width: 500,
-margin: `${theme.spacing(0)} auto`
+margin: `${theme.spacing(0)} auto`,opacity: 0.5
 },
 loginBtn: {
   marginTop: theme.spacing(2),
@@ -29,6 +29,7 @@ header: {
 },
 card: {
   marginTop: theme.spacing(35),
+  
   
 
 }
