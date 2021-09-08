@@ -6,9 +6,9 @@ for(let i=0;i<10;i++){
         id:"id*i"
     });
 }
-function Item(props){
-    return<h1 onClick={()=>{
-        props.delete(props.id)}}>{props.number}</h1>;
+
+function Item(props) {
+    return <h1 onClick={()=>{ props.delete(props.id)}}>{props.number}</h1>
 }
 export default function KeyExample(){ 
 
