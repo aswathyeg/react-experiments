@@ -18,6 +18,12 @@ import ControlledUncontrolled from './Homee';
 //import Home from './Homee';
 import Homee from './Homee';
 import Refs from './Refs';
+import KeyExample from './KeyExample';
+import Hello from './Hello';
+import PropsContext from './Props';
+import Props from './Props';
+import ContextExample from './ContextExample';
+
 
 
 
@@ -56,7 +62,7 @@ import Refs from './Refs';
 function App() {
   return (
     <div>
-   <Refs/>
+   <ContextExample/>
    
      </div>
   )
