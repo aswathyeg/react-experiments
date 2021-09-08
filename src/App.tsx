@@ -20,6 +20,10 @@ import Homee from './Homee';
 import Refs from './Refs';
 import KeyExample from './KeyExample';
 import Hello from './Hello';
+import PropsContext from './Props';
+import Props from './Props';
+import ContextExample from './ContextExample';
+
 
 
 
@@ -58,7 +62,7 @@ import Hello from './Hello';
 function App() {
   return (
     <div>
-   <Hello/>
+   <ContextExample/>
    
      </div>
   )
