@@ -23,6 +23,7 @@ import Hello from './Hello';
 import PropsContext from './Props';
 import Props from './Props';
 import ContextExample from './ContextExample';
+import DetectHover from './HOCExample';
 
 
 
@@ -62,7 +63,7 @@ import ContextExample from './ContextExample';
 function App() {
   return (
     <div>
-   <ContextExample/>
+   <DetectHover/>
    
      </div>
   )
