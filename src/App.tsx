@@ -24,6 +24,7 @@ import PropsContext from './Props';
 import Props from './Props';
 import ContextExample from './ContextExample';
 import DetectHover from './HOCExample';
+import IncrementDecrementFunction from './IncrementDecrementFunction';
 
 
 
@@ -63,7 +64,7 @@ import DetectHover from './HOCExample';
 function App() {
   return (
     <div>
-   <DetectHover/>
+   <IncrementDecrementFunction/>
    
      </div>
   )
