@@ -17,7 +17,7 @@ function DetectHover(Component){
 }
 function HOCExample (props){
     const style={
-        backgroundColor:props.hoverd?"red":""
+        backgroundColor:props.hoverd?"yellow":""
     }
    
     return(
