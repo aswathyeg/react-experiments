@@ -1,26 +1,26 @@
 import React, { useContext } from 'react';
-const Context=React.createContext(1);
-function Child(props){
+const Context = React.createContext(1);
+function Child(props) {
     return (
         <div>
-<GrandChild />
+            <GrandChild />
 
         </div>
     )
 }
-function GrandChild(props){
-    const value=useContext(Context)
+function GrandChild(props) {
+    const value = useContext(Context)
     return (
         <div>
-{value}
+            {value}
         </div>
     )
 }
-export default function ContextExample(){
+export default function ContextExample() {
     return (
-    <Context.Provider value={1}>
-        <div>
-<Child />
-</div>
-    </Context.Provider>)
+        <Context.Provider value={1}>
+            <div>
+                <Child />
+            </div>
+        </Context.Provider>)
 }
