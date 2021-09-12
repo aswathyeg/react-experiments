@@ -25,6 +25,9 @@ import Props from './Props';
 import ContextExample from './ContextExample';
 import DetectHover from './HOCExample';
 import IncrementDecrementFunction from './IncrementDecrementFunction';
+import LifeCycleMethods from './LifeCycleMethods';
+import Calculator from './Calculator';
+import Calculators from './Calculators';
 
 
 
@@ -64,7 +67,7 @@ import IncrementDecrementFunction from './IncrementDecrementFunction';
 function App() {
   return (
     <div>
-   <IncrementDecrementFunction/>
+   <Calculators/>
    
      </div>
   )
