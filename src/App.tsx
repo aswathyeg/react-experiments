@@ -26,6 +26,8 @@ import ContextExample from './ContextExample';
 import DetectHover from './HOCExample';
 import IncrementDecrementFunction from './IncrementDecrementFunction';
 import LifeCycleMethods from './LifeCycleMethods';
+import Calculator from './Calculator';
+import Calculators from './Calculators';
 
 
 
@@ -65,7 +67,7 @@ import LifeCycleMethods from './LifeCycleMethods';
 function App() {
   return (
     <div>
-   <LifeCycleMethods/>
+   <Calculators/>
    
      </div>
   )
