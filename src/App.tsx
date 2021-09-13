@@ -67,7 +67,7 @@ import Calculators from './Calculators';
 function App() {
   return (
     <div>
-   <Calculators/>
+   <Calculator/>
    
      </div>
   )
