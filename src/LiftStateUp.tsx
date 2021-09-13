@@ -18,8 +18,8 @@ function ItemCount (props) {
     )
     
 }
-export default function  LiftStateUp (){
-    const[items,setItems]=useState(["foo","bbb","ccc"])
+export default function  LiftStateUp (){//closest common ancesstor
+    const[items,setItems]=useState(["foo","bbb","ccc"])//shared state
     return(
         <div>
 <List items={items}/>
