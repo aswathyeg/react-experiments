@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom';
+import TemperatureInput from './TemperatureInput'
 
 
 interface IProps {
@@ -8,41 +9,21 @@ interface IProps {
 interface IState {
     textcontent?: any
 }
-function BoilingVerdict(props: any): JSX.Element {
-    if (props.celcious >= 100) {
-        return (
-            <p>The water would boil.</p>)
-
-    }
-    return <p>The water would not boil.</p>;
-
-
-}
-class Calculator extends React.Component<IProps, IState>{
-    constructor(props: any) {
+class Calculator extends React.Component <IProps,IState>{
+    constructor(props){
         super(props);
-        this.handleOnChange = this.handleOnChange.bind(this);
-        this.state = {
-            textcontent: ''
-        }
+        this.state={
+            // temperature:'',
+            // scale:''
 
-    }
-
-    handleOnChange(e: any) {
-        this.setState({ textcontent: e.target.value })
-    }
+        }}
     render() {
-        return (
-
-            <fieldset>
-                <legend>Enter temperature in Celsius:</legend>
-                <input onChange={this.handleOnChange} type='text' value={this.state.textcontent}
-
-                />
-                <BoilingVerdict celcious={parseFloat(this.state.textcontent)} />
-            </fieldset>
-
-        );
+      return (
+        <div>
+          <TemperatureInput scale="c" />
+          <TemperatureInput scale="f" />
+        </div>
+      );
     }
 }
 export default Calculator;
