@@ -28,4 +28,4 @@ function HOCExample (props){
         </div>
     )
 }
-export default DetectHover(HOCExample);
+export default DetectHover(HOCExample);//passing component as an argument
