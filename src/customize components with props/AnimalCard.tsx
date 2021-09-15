@@ -1,10 +1,21 @@
 import './Animal.css';
-import Data from './Data';
-export default function AnimalCard(props) {
+
+export default function AnimalCard({
+  additional,
+  diet,
+  name,
+  scientificName,
+  size
+}){
+  //const {name}=props;
     return( 
        
-    <h2>Animal</h2>
-
+      <div>
+      <h2>{name}</h2>
+      <h3>{scientificName}</h3>
+      <h4>{size}kg</h4>
+      <div>{diet.join(', ')}.</div>
+    </div>
     
     )
 
