@@ -28,6 +28,8 @@ import IncrementDecrementFunction from './IncrementDecrementFunction';
 import LifeCycleMethods from './LifeCycleMethods';
 import Calculator from './Calculator';
 import Calculators from './Calculators';
+import Data from './customize components with props/Data';
+import AnimalCard from './customize components with props/AnimalCard';
 
 
 
@@ -66,9 +68,14 @@ import Calculators from './Calculators';
 
 function App() {
   return (
-    <div>
-   <Calculator/>
-   
+    <div className="wrapper">
+    <h1>Animals</h1>
+    {Data.map(animal=>(
+      <AnimalCard
+       key={animal.name}
+       name={animal.name}
+      />
+    ))}
      </div>
   )
 }
