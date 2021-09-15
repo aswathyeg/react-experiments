@@ -77,7 +77,9 @@ function App() {
           additional={animal.additional}
           diet={animal.diet}
           scientificName={animal.scientificName}
-          size={animal.size} //passing Data as props
+          size={animal.size}
+         
+          //passing Data as props
 
         />
       ))}
