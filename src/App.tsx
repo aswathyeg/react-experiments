@@ -5,7 +5,7 @@ import React from 'react';
 import Provider from './contextApI/Provider';
 import Building from './contextApI/Building';
 import UserDetails from './UserApp/UserDetails';
-import { BrowserRouter, Route ,Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { UserList } from './UserApp/UserList';
 import LoginHere from './LoginHere';
 import AddMe from './Addme';
@@ -55,28 +55,33 @@ import AnimalCard from './customize components with props/AnimalCard';
 //     rating: 4.6,
 //     url: "https://codingthesmartway.com/courses/modern-react-with-redux/"
 //   },
-  // {
-  //   id: 3,
-  //   title: "The Complete React Developer Course (w/ Hooks and Redux)",
-  //   author: "Andrew Mead",
-  //   hours_video: 39,
-  //   number_of_lectures: 200,
-  //   rating: 4.7,
-  //   url: "http://codingthesmartway.net/courses/complete-react-web-app-developer/"
-  // }
+// {
+//   id: 3,
+//   title: "The Complete React Developer Course (w/ Hooks and Redux)",
+//   author: "Andrew Mead",
+//   hours_video: 39,
+//   number_of_lectures: 200,
+//   rating: 4.7,
+//   url: "http://codingthesmartway.net/courses/complete-react-web-app-developer/"
+// }
 //];
 
 function App() {
   return (
     <div className="wrapper">
-    <h1>Animals</h1>
-    {Data.map(animal=>(
-      <AnimalCard
-       key={animal.name}
-       name={animal.name}
-      />
-    ))}
-     </div>
+      <h1>Animals</h1>
+      {Data.map(animal => (
+        <AnimalCard
+          key={animal.name}
+          name={animal.name}
+          additional={animal.additional}
+          diet={animal.diet}
+          scientificName={animal.scientificName}
+          size={animal.size} //passing Data as props
+
+        />
+      ))}
+    </div>
   )
 }
 
