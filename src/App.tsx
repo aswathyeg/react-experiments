@@ -29,61 +29,14 @@ import LifeCycleMethods from './LifeCycleMethods';
 import Calculator from './Calculator';
 import Calculators from './Calculators';
 import Data from './customize components with props/Data';
-import AnimalCard from './customize components with props/AnimalCard';
-
-
-
-
-// import CoursesList from './CoursesList';
-
-// const courses = [
-//   {
-//     id: 1,
-//     title: "React - The Complete Guide (incl Hooks, React Router, Redux)",
-//     author: "Maximilian Schwarzmülller",
-//     hours_video: 40.5,
-//     number_of_lectures: 490,
-//     rating: 4.6,
-//     url: "https://codingthesmartway.com/courses/react-complete-guide/"
-//   },
-//   {
-//     id: 2,
-//     title: "Modern React with Redux",
-//     author: "Stephen Grider",
-//     hours_video: 47.5,
-//     number_of_lectures: 488,
-//     rating: 4.6,
-//     url: "https://codingthesmartway.com/courses/modern-react-with-redux/"
-//   },
-// {
-//   id: 3,
-//   title: "The Complete React Developer Course (w/ Hooks and Redux)",
-//   author: "Andrew Mead",
-//   hours_video: 39,
-//   number_of_lectures: 200,
-//   rating: 4.7,
-//   url: "http://codingthesmartway.net/courses/complete-react-web-app-developer/"
-// }
-//];
+import Product from  './components/product/product';
 
 function App() {
-  return (
-    <div className="wrapper">
-      <h1>Animals</h1>
-      {Data.map(animal => (
-        <AnimalCard
-          key={animal.name}
-          name={animal.name}
-          additional={animal.additional}
-          diet={animal.diet}
-          scientificName={animal.scientificName}
-          size={animal.size}
-         
-          //passing Data as props
 
-        />
-      ))}
-    </div>
+  return (
+  <div>
+  <Product />
+  </div>
   )
 }
 
