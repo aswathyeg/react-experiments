@@ -1,6 +1,22 @@
 import React, { useState } from 'react';
 import './product.css';
-
+const products = [
+    {
+      emoji: '🍦',
+      name: 'ice cream',
+      price: 5
+    },
+    {
+      emoji: '🍩',
+      name: 'donuts',
+      price: 2.5,
+    },
+    {
+      emoji: '🍉',
+      name: 'watermelon',
+      price: 4
+    }
+  ];
 const currencyOptions = {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -33,8 +49,17 @@ export default function Product() {
         </div>
             <div>Total: {getTotal(total)}</div>
 
-            <div className="product"><span role="img" aria-label="ice cream">🍦</span></div>
-            <button onClick={addMore}>Add</button> <button onClick={remove}>Remove</button>
+            <div>
+                {products.map(products=>(
+                    <div key ={products.name}>
+                        <div className="product">
+                            <span role="img"aria-label={products.name}>{products.emoji}</span>
+                            </div>
+            <button>Add</button>
+            <button>Remove</button>
+          </div>
+                ))}
+                </div>
         </div>
     )
 }
