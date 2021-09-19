@@ -1,5 +1,6 @@
 import { useReducer } from 'react';
 import './product.css';
+
 const products = [
     {
         emoji: '🍦',
@@ -17,14 +18,17 @@ const products = [
         price: 4
     }
 ];
+
 const currencyOptions = {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
 }
+
 function getTotal(cart) {
     const total = cart.reduce((totalCost, item) => totalCost + item.price, 0);
     return total.toLocaleString(undefined, currencyOptions)
 }
+
 function cartReducer(state, action) {
     switch (action.type) {
         case 'add':
@@ -41,6 +45,7 @@ function cartReducer(state, action) {
             return state;
     }
 }
+
 export default function Product() {
     const [cart, setCart] = useReducer(cartReducer, []);
 
