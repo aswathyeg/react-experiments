@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-export default function Login(){
+export default function Login(props){
     return(
         <div >
             <h1 className="login-wrapper">
