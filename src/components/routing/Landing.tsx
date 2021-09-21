@@ -4,6 +4,7 @@ import './Landing.css';
 import {BrowserRouter,Switch,Route, Link} from 'react-router-dom'
 import Narwhal from './Narwhal/Narwhal';
 import Whale from './Whale/Whale';
+
 export default function Landing(){
     return(
         <div className="wrapper">
