@@ -31,12 +31,13 @@ import Calculators from './Calculators';
 import Data from './customize components with props/Data';
 import Product from  './components/product/product';
 import Landing from './components/routing/Landing';
+import LandLogin from './components/LoginAuthentication/LandLogin';
 
 function App() {
 
   return (
   <div>
-  <Landing />
+  <LandLogin />
   </div>
   )
 }
