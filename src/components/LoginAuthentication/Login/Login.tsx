@@ -16,6 +16,15 @@ return fetch('http://localhost:8080/login',{
 export default function Login({setToken}){
     const[username,setUsername]=useState('');
     const [password,setPassword]=useState('');
+    const handleSubmit = async e => {
+        e.preventDefault();
+        const token = await loginUser({
+          username,
+          password
+        });
+        setToken(token);
+      }
+
     return(
         <div >
             <h1 className="login-wrapper">
@@ -26,7 +35,7 @@ export default function Login({setToken}){
             <br></br>
             <input type="password" placeholder="password" onChange={e=>setPassword(e.target.value)}/>
             <br></br>
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     )
