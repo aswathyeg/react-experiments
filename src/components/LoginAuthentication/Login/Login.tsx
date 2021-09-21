@@ -30,12 +30,12 @@ export default function Login({setToken}){
             <h1 className="login-wrapper">
                 Please Login
             </h1>
-            <form className="login-wrapper">
+            <form className="login-wrapper" onSubmit={handleSubmit}>
             <input type="text" placeholder="UserName" onChange={e=>setUsername(e.target.value)}/>
             <br></br>
             <input type="password" placeholder="password" onChange={e=>setPassword(e.target.value)}/>
             <br></br>
-            <button type="submit" onClick={handleSubmit}>Submit</button>
+            <button type="submit">Submit</button>
             </form>
         </div>
     )
