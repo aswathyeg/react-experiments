@@ -1,3 +1,4 @@
+//creating local api
 
 const express=require('express');
 const cors=require('cors');//express and cors are used for creating fake server
