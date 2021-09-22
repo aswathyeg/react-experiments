@@ -5,11 +5,20 @@ import Preferences from './Preferences/Prefenences';
 import Login from './Login/Login';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 
+function setToken(userToken){
+
+}
+function getToken(){
+    
+}
+
 export default function LandLogin(){
     const[token,setToken]=useState();
+
     if(!token){
         return <Login setToken={setToken} />
     }
+
     return(
         <div className="wrapper">
             <h1>
