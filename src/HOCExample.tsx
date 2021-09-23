@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 function DetectHover(Component){
     return function Hoc(props){
         const [hoverd,setHoverd]=useState(false);
