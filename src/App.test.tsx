@@ -35,5 +35,16 @@ describe('counter testing',()=>{
     test("render a button with a text of `Decrement`",()=>{
         expect(wrapper.find("#decrement-btn").text()).toBe('Decrement');
     });
-    
+    test("render the click event for decrement button and decrement counter value",()=>{
+        wrapper.find("#increment-btn").simulate("click")
+        expect(wrapper.find("#counter-value").text()).toBe("1")
+        wrapper.find("#decrement-btn").simulate("click");
+        expect(wrapper.find("#counter-value").text()).toBe("0");
+    });
+    // test("render the click event for decrement button and stop decrement when count is zero",()=>{
+    //     wrapper.find("#increment-btn").simulate("click")
+    //     expect(wrapper.find("#counter-value").text()).toBe("1")
+    //     wrapper.find("#decrement-btn").simulate("click");
+    //     expect(wrapper.find("#counter-value").text()).toBe("0");
+    // })
 });
