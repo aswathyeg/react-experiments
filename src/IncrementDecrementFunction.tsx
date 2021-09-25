@@ -13,9 +13,9 @@ function Counting() {
     }
 
     return (
-        <div>
-            <h1>This is counter app</h1> //for testing
-            <p>Current Value:{count}</p>
+        <div> 
+            <h1>This is counter app</h1> 
+            <div  id="counter-value">{count}</div>
             <button id="increment-btn" onClick={increment}>Increment</button>
             <button onClick={decrement}>Decrement</button>
         </div>
