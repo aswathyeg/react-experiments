@@ -3,12 +3,13 @@
 
 import React from 'react';
 import LandLogin from './components/LoginAuthentication/LandLogin';
+import Counting from './IncrementDecrementFunction';
 
 function App() {
 
   return (
   <div>
-  <LandLogin />
+  <Counting />
   </div>
   )
 }
