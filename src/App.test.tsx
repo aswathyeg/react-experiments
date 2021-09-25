@@ -17,7 +17,7 @@ describe('counter testing',()=>{
         expect(wrapper.find("h1").text()).toContain("This is counter app");
     });
     
-    test("render a buttun with text of `Increment~",()=>{
+    test("render a button with text of `Increment~",()=>{
         
         expect (wrapper.find("#increment-btn").text()).toBe('Increment');
     });
@@ -30,5 +30,10 @@ describe('counter testing',()=>{
         wrapper.find("#increment-btn").simulate("click");
         expect(wrapper.find("#counter-value").text()).toBe("1");
 
-    })
+    });
+    //testing decrement
+    test("render a button with a text of `Decrement`",()=>{
+        expect(wrapper.find("#decrement-btn").text()).toBe('Decrement');
+    });
+    
 });
