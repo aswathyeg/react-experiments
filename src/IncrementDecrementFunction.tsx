@@ -13,10 +13,11 @@ function Counting() {
     }
 
     return (
-        <div>
-            <p>Current Value:{count}</p>
-            <button onClick={increment}>Increment</button>
-            <button onClick={decrement}>Decrement</button>
+        <div> 
+            <h1>This is counter app</h1> 
+            <div  id="counter-value">{count}</div>
+            <button id="increment-btn" onClick={increment}>Increment</button>
+            <button id="decrement-btn" onClick={decrement}>Decrement</button>
         </div>
     )
 
