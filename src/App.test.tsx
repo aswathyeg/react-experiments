@@ -1,6 +1,10 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import IncrementDecrementFunction from './IncrementDecrementFunction';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 describe('counter testing',()=>{
     test("render the title of the counter",()=>{
