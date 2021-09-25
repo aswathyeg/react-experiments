@@ -7,12 +7,15 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 describe('counter testing',()=>{
-
-    const wrapper=shallow(<IncrementDecrementFunction/>);
-    console.log(wrapper.debug());
+      
     test("render the title of the counter",()=>{
-        const {getByText}=render(<IncrementDecrementFunction/>);
-        const linkElement=getByText("This is counter app");
-        expect(linkElement).toBeInTheDocument();
+        const wrapper=shallow(<IncrementDecrementFunction/>);
+        expect(wrapper.find("h1").text()).toContain("This is counter app");
     });
+    
+    test("render a buttun with text of `Increment~",()=>{
+        const wrapper=shallow(<IncrementDecrementFunction/>);
+        expect (wrapper.find("#increment-btn").text()).toBe('Increment');
+    });
+    
 });
