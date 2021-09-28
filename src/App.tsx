@@ -3,6 +3,7 @@
 
 import React from 'react';
 import ClassLifecycle from './ClassLifecycle';
+import UseEffectExample from './UseEffectExample';
 
 function App() {
 
