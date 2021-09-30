@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      {animals.map(animal => {
+      {animals.map(animal => 
         <AnimalCard
           diet={animal.diet}
           scientificName={animal.scientificName}
@@ -21,7 +21,7 @@ function App() {
 
         />
 
-      })}
+      )}
 
     </div>
   )
