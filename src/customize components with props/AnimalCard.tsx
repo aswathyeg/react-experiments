@@ -1,34 +1,29 @@
 import './Animal.css';
 import PropTypes from 'prop-types';
+import Card from '../components/Card/Card';
+
 export default function AnimalCard({
-  
-  diet,
-  name,
-  scientificName,
-  size,
-  
+  name, size, ...props 
   
 }){
   //const {name}=props;
     return( 
        
-      <div className="animal-wrapper">
-      <h2>{name}</h2>
-      <h3>{scientificName}</h3>
-      <h4>{size}kg</h4>
-      <div>{diet.join(', ')}</div>
-
-    </div>
+      <Card title="Animal">
+      <h3>{name}</h3>
+      <div>{size}kg</div>
+      {/* <AnimalDetails
+        {...props}
+      /> */}
+    </Card>
     
     )
     
     
   }
   AnimalCard.propTypes = {
-    diet: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scientificName: PropTypes.string.isRequired,
-    size: PropTypes.number.isRequired,
-    name:PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
   } //to make sure the data type is correct.
 
 
