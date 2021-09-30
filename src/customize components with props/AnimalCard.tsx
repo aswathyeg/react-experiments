@@ -16,7 +16,7 @@ export default function AnimalCard({
       <h2>{name}</h2>
       <h3>{scientificName}</h3>
       <h4>{size}kg</h4>
-      <div>{diet.join(', ')}.</div>
+      <div>{diet.join(', ')}</div>
 
     </div>
     
@@ -30,3 +30,6 @@ export default function AnimalCard({
     size: PropTypes.number.isRequired,
     name:PropTypes.string.isRequired
   } //to make sure the data type is correct.
+
+
+
