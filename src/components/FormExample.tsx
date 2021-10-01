@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FormExample.css'
 export default function FormExample() {
+    const[submitting,setSubmitting]=useState(false);
+
+
     const handleSubmit = (event) => {//given SyntheticEvent as an argument.
         event.preventDefault();// to stop the page from refreshing the page once click ok on alert
-        alert('You have submitted the form.')
+
+       // alert('You have submitted the form.')
+       setSubmitting(true);
+
+       setTimeout(()=>{
+        setSubmitting(false)
+       },3000)
 
 
     }
