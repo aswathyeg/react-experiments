@@ -6,13 +6,14 @@ import ClassLifecycle from './ClassLifecycle';
 import UseEffectExample from './UseEffectExample';
 import animals from './customize components with props/Data';
 import AnimalCard from './customize components with props/AnimalCard';
+import FormExample from './components/FormExample';
 
 function App() {
 
 
   return (
     <div>
-      {animals.map(animal => {
+      {/* {animals.map(animal => 
         <AnimalCard
           diet={animal.diet}
           scientificName={animal.scientificName}
@@ -21,8 +22,8 @@ function App() {
 
         />
 
-      })}
-
+      )} */}
+<FormExample />
     </div>
   )
 }
