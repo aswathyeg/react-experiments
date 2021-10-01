@@ -1,16 +1,25 @@
 import React from 'react';
-function FormExample(){
-    return(
+import './FormExample.css'
+export default function FormExample() {
+    const handleSubmit = (event) => {//given SyntheticEvent as an argument.
+        event.preventDefault();// to stop the page from submitting the form
+        alert('You have submitted the form.')
+
+
+    }
+    return (
         <div className="wrapper">
             <h1>
                 How about the Apples
             </h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <fieldset>
-<label>
-
-</label>
+                    <label>
+                        <p>Name</p>
+                        <input name='name'></input>
+                    </label>
                 </fieldset>
+                <button type="submit">Submit</button>
             </form>
         </div>
     )
