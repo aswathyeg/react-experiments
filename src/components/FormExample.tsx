@@ -2,7 +2,7 @@ import React from 'react';
 import './FormExample.css'
 export default function FormExample() {
     const handleSubmit = (event) => {//given SyntheticEvent as an argument.
-        event.preventDefault();// to stop the page from submitting the form
+        event.preventDefault();// to stop the page from refreshing the page once click ok on alert
         alert('You have submitted the form.')
 
 
