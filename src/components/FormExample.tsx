@@ -1,12 +1,12 @@
 import React, { useReducer, useState } from 'react';
 import './FormExample.css'
 
-const formReducer=(state,event)=>{
+const formReducer = (state, event) => {
 
-return{
-    ...state,
-   [event.name]: event.value
-}
+    return {
+        ...state,
+        [event.name]: event.value
+    }
 }
 
 export default function FormExample() {
@@ -25,6 +25,14 @@ export default function FormExample() {
 
 
     }
+    const handleChange = (event) => {
+        setFormData({
+            name: event.target.name,
+            value: event.target.value,
+        });
+
+
+    }
     return (
         <div className="wrapper">
             <h1>
@@ -32,9 +40,13 @@ export default function FormExample() {
             </h1>
             {submitting &&
                 <div>
-                    Submitting form ...
-    </div>
-
+                    You are submitting the following:
+                   <ul>
+                        {Object.entries(formData).map(([name, value]) => (//Convert the data to an array using Object.entries
+                            <li key={name}><strong>{name}</strong>:{value.toString()}</li>
+                        ))}
+                    </ul>
+                </div>
             }
 
 
@@ -43,7 +55,7 @@ export default function FormExample() {
                 <fieldset>
                     <label>
                         <p>Name</p>
-                        <input name='name'></input>
+                        <input name='name' onChange={handleChange}></input>
                     </label>
                 </fieldset>
                 <button type="submit">Submit</button>
