@@ -8,10 +8,23 @@ const formReducer = (state, event) => {
         [event.name]: event.value
     }
 }
+const reducer=(state,action)=>{
+    return{
+...state,
+[action]:!state[action]
+
+}
+}
 
 export default function FormExample() {
     const [submitting, setSubmitting] = useState(false);
     const [formData, setFormData] = useReducer(formReducer, {});
+    
+    const [tabs,toggleTabs]=useReducer(reducer,{
+        characterCount: true,
+        wordCount: true,
+        characterMap: true
+    });
 
     const handleSubmit = (event) => {//given SyntheticEvent as an argument.
         event.preventDefault();// to stop the page from refreshing the page once click ok on alert
@@ -59,7 +72,13 @@ export default function FormExample() {
                     </label>
                 </fieldset>
                 <button type="submit">Submit</button>
+               
             </form>
+            <div>
+      <button onClick={() => toggleTabs('characterCount')}>Character Count</button>
+      <button onClick={() => toggleTabs('wordCount')}>Word Count</button>
+      <button onClick={() => toggleTabs('characterMap')}>Character Map</button>
+    </div>
         </div>
     )
 }
