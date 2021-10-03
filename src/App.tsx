@@ -7,6 +7,7 @@ import UseEffectExample from './UseEffectExample';
 import animals from './customize components with props/Data';
 import AnimalCard from './customize components with props/AnimalCard';
 import FormExample from './components/FormExample';
+import Counting from './Counting';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
         />
 
       )} */}
-<FormExample />
+<Counting />
     </div>
   )
 }
