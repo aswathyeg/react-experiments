@@ -21,7 +21,7 @@ export default function FormExample() {
     const [formData, setFormData] = useReducer(formReducer, {});
     
     const [tabs,toggleTabs]=useReducer(reducer,{
-        characterCount: true,
+        characterCount: true, //initial state
         wordCount: true,
         characterMap: true
     });
