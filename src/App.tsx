@@ -8,6 +8,7 @@ import animals from './customize components with props/Data';
 import AnimalCard from './customize components with props/AnimalCard';
 import FormExample from './components/FormExample';
 import Counting from './Counting';
+import RiverInformation from './RiverInformation';
 
 function App() {
 
@@ -24,7 +25,10 @@ function App() {
         />
 
       )} */}
-<Counting />
+<div className="wrapper">
+      <h1>World's Longest Rivers</h1>
+      <RiverInformation />
+    </div>
     </div>
   )
 }
