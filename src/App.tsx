@@ -9,12 +9,15 @@ import AnimalCard from './customize components with props/AnimalCard';
 import FormExample from './components/FormExample';
 import Counting from './Counting';
 import RiverInformation from './RiverInformation';
+import KeyExample from './KeyExample';
+import Keys from './Keys';
 
 function App() {
 
 
   return (
     <div>
+      <Keys />
       {/* {animals.map(animal => 
         <AnimalCard
           diet={animal.diet}
@@ -25,10 +28,10 @@ function App() {
         />
 
       )} */}
-<div className="wrapper">
+{/* <div className="wrapper">
       <h1>World's Longest Rivers</h1>
       <RiverInformation />
-    </div>
+    </div> */}
     </div>
   )
 }
