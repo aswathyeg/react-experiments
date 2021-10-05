@@ -11,13 +11,14 @@ import Counting from './Counting';
 import RiverInformation from './RiverInformation';
 import KeyExample from './KeyExample';
 import Keys from './Keys';
+import Keyexample from './Keyexamples';
 
 function App() {
 
-
+  const numbers=[1,2,3,4]
   return (
     <div>
-      <Keys />
+      <Keyexample numbers={numbers} />
       {/* {animals.map(animal => 
         <AnimalCard
           diet={animal.diet}
