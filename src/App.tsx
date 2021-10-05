@@ -12,13 +12,17 @@ import RiverInformation from './RiverInformation';
 import KeyExample from './KeyExample';
 import Keys from './Keys';
 import Keyexample from './Keyexamples';
+import KeyBlog from './KeyBlog';
 
 function App() {
-
-  const numbers=[1,2,3,4]
+  const posts = [
+    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+  ];
+  //const numbers=[1,2,3,4]
   return (
     <div>
-      <Keyexample numbers={numbers} />
+      <KeyBlog posts={posts} />
       {/* {animals.map(animal => 
         <AnimalCard
           diet={animal.diet}
