@@ -10,7 +10,8 @@ for(let i=0;i<10;i++){
 function Item(props) {
     return <h1 onClick={()=>{ props.delete(props.id)}}>{props.number}</h1>
 }
-export default function KeyExample(){ 
+export default function KeyExample(props){ 
+    
 
     const [state,setState]=useState(data);
 
