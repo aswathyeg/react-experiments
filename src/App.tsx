@@ -31,6 +31,7 @@ function App() {
 <Switch>
   <Route path='/options' component={Options}></Route>
 </Switch>
+
 </div>
 
       </BrowserRouter>
