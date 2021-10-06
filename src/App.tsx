@@ -13,33 +13,29 @@ import KeyExample from './KeyExample';
 import Keys from './Keys';
 import Keyexample from './Keyexamples';
 import KeyBlog from './KeyBlog';
+import SideBar from './SiderBar';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Options from './Options';
 
 function App() {
-  const posts = [
-    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-  ];
-  //const numbers=[1,2,3,4]
+  
   return (
+    <BrowserRouter>
     <div>
-      <KeyBlog posts={posts} />
-      {/* {animals.map(animal => 
-        <AnimalCard
-          diet={animal.diet}
-          scientificName={animal.scientificName}
-          name={animal.name}
-          size={animal.size}
+    <Switch>
+  <Route  exact path='/' component={SideBar}></Route>
+</Switch>
 
-        />
 
-      )} */}
-{/* <div className="wrapper">
-      <h1>World's Longest Rivers</h1>
-      <RiverInformation />
-    </div> */}
-    </div>
+<Switch>
+  <Route path='/options' component={Options}></Route>
+</Switch>
+</div>
+
+      </BrowserRouter>
+   
   )
 }
 
-//const rootElement = document.getElementById("root");
 export default App;
