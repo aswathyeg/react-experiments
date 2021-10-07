@@ -23,29 +23,29 @@ export default class SideBar extends React.Component{
     constructor(props) {
         super(props);
         
-        this.handleClick= this.handleClick.bind(this);
+        this.clickStatus= this.clickStatus.bind(this);
     
       }
  
     state = {
         collapsed: false,
-        redirect : false
+        statusRedirect : false
       };
     
       onCollapse = collapsed => {
         console.log(collapsed);
         this.setState({ collapsed });
       };
-      handleClick(){
-        this.setState({redirect: true});
+      clickStatus(){
+        this.setState({ statusRedirect: true});
                
       }
       render() {
        
         const { collapsed } = this.state;
-        if (this.state.redirect) {
+        if (this.state. statusRedirect) {
 
-            return <Redirect push to="/options" />;
+            return <Redirect push to="/status" />;
       
             
        }
@@ -54,8 +54,8 @@ export default class SideBar extends React.Component{
             <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
               <div className="logo" />
               <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                <Menu.Item key="1" onClick ={this.handleClick}icon={<PieChartOutlined />}>
-                  Option 1
+                <Menu.Item key="1" onClick ={this.clickStatus}icon={<PieChartOutlined />}>
+                  Status
                 </Menu.Item>
                 {/* <Menu.Item key="2" icon={<DesktopOutlined />}>
                   Option 2
