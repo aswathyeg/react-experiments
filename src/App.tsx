@@ -16,7 +16,7 @@ import KeyBlog from './KeyBlog';
 import SideBar from './SiderBar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Options from './Options';
+import Status from './Status';
 
 function App() {
   
@@ -29,7 +29,7 @@ function App() {
 
 
 <Switch>
-  <Route path='/options' component={Options}></Route>
+  <Route path='/status' component={Status}></Route>
 </Switch>
 
 </div>
