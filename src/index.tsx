@@ -6,10 +6,13 @@ import { store } from './store';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SideBar from './SiderBar';
 
 ReactDOM.render(
   <React.StrictMode>
+     
     <App />
+   
   </React.StrictMode>,
   document.getElementById('root')
 );
