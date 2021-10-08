@@ -23,8 +23,13 @@ import SecondTeam from './SecondTeam';
 function App() {
 
   return (
+   
+    
+    
+    
     <BrowserRouter>
-      <div>
+     <div>
+      
         <Switch>
           <Route exact path='/' component={SideBar}></Route>
         </Switch>
@@ -40,10 +45,12 @@ function App() {
           <Route path='/secondTeam' component={SecondTeam}></Route>
         </Switch>
 
-      </div>
+        </div>
 
     </BrowserRouter>
-
+     
+    
+    
   )
 }
 

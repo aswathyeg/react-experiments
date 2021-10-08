@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Breadcrumb, Avatar } from 'antd';
 import { useHistory } from 'react-router-dom';
 import {
   DesktopOutlined,
@@ -25,7 +25,7 @@ export default class SideBar extends React.Component {
 
     this.clickStatus = this.clickStatus.bind(this);
     this.clickFirstTeam = this.clickFirstTeam.bind(this);
-    this.clickSecondTeam = this.clickFirstTeam.bind(this);
+    this.clickSecondTeam = this.clickSecondTeam.bind(this);
   }
 
   state = {
@@ -79,7 +79,7 @@ export default class SideBar extends React.Component {
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" onClick={this.clickStatus} icon={<PieChartOutlined />}>
-              Status
+              Team Summary
                 </Menu.Item>
             {/* <Menu.Item key="2" icon={<DesktopOutlined />}>
                   Option 2
@@ -89,7 +89,7 @@ export default class SideBar extends React.Component {
                   <Menu.Item key="4">Bill</Menu.Item>
                   <Menu.Item key="5">Alex</Menu.Item>
                 </SubMenu> */}
-            <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
+            <SubMenu key="sub2" icon={<TeamOutlined />} title="Team Details">
               <Menu.Item key="6" onClick={this.clickFirstTeam}>Team 1</Menu.Item>
               <Menu.Item key="8" onClick={this.clickSecondTeam}>Team 2</Menu.Item>
             </SubMenu>
@@ -98,9 +98,29 @@ export default class SideBar extends React.Component {
                 </Menu.Item> */}
           </Menu>
         </Sider>
-        <Layout className="site-layout">
+        {/* <>
+     
+     <div id="container" style={{padding: "44px" }}>
+    
+       
+      <Avatar.Group>
+        
+        <Avatar
+          style={{
+            backgroundColor: '#f56a00',
+          }}
+        >
+          1
+        </Avatar>
+ 
+      
+      </Avatar.Group>
+      
+            </div>
+    </> */}
+        {/* <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }} />
-          <Content style={{ margin: '0 16px' }}>
+          <Content style={{ margin: '0 16px' }}> */}
             {/* <Breadcrumb style={{ margin: '16px 0' }}>
                   <Breadcrumb.Item>User</Breadcrumb.Item>
                   <Breadcrumb.Item>Bill</Breadcrumb.Item>
@@ -108,9 +128,9 @@ export default class SideBar extends React.Component {
                 <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
                   Bill is a cat.
                 </div> */}
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-        </Layout>
+          {/* </Content> */}
+          {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}
+        {/* </Layout> */}
       </Layout>
     );
   }
