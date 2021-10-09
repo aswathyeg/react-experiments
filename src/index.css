@@ -74,4 +74,16 @@ code {
   color: #fff !important;
 }
  */
+ div.ant-progress-circle,
+div.ant-progress-line {
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 80px;
+}
+[class*='-col-rtl'] div.ant-progress-circle,
+[class*='-col-rtl'] div.ant-progress-line {
+  margin-right: 100;
+  margin-left: 80px;
+}
 

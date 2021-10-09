@@ -1,41 +1,34 @@
-
-// list and props example
-
-import React from 'react';
-import ClassLifecycle from './ClassLifecycle';
-import UseEffectExample from './UseEffectExample';
-import animals from './customize components with props/Data';
-import AnimalCard from './customize components with props/AnimalCard';
-import FormExample from './components/FormExample';
-import Counting from './Counting';
-import RiverInformation from './RiverInformation';
-import KeyExample from './KeyExample';
-import Keys from './Keys';
-import Keyexample from './Keyexamples';
-import KeyBlog from './KeyBlog';
-import SideBar from './SiderBar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import Options from './Options';
+import FirstTeam from './FirstTeam';
+import SecondTeam from './SecondTeam';
+import TeamSummary from './TeamSummary';
+import LandingSider from './LandingSider';
 
 function App() {
-  
+
   return (
     <BrowserRouter>
-    <div>
-    <Switch>
-  <Route  exact path='/' component={SideBar}></Route>
-</Switch>
+      <div>
+
+        <Switch>
+          <Route exact path='/' component={LandingSider}></Route>
 
 
-<Switch>
-  <Route path='/options' component={Options}></Route>
-</Switch>
+          <Route path='/teamSummary' component={TeamSummary}></Route>
 
-</div>
 
-      </BrowserRouter>
-   
+          <Route path='/firstTeam' component={FirstTeam}></Route>
+
+
+          <Route path='/secondTeam' component={SecondTeam}></Route>
+        </Switch>
+
+      </div>
+
+    </BrowserRouter>
+
+
+
   )
 }
 
