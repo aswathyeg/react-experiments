@@ -49,19 +49,19 @@ export default class SiderBar extends React.Component {
     const { collapsed } = this.state;
     if (this.state.teamSummaryRedirect) {
 
-      return <Redirect push to="/teamSummary" />;
+      return <Redirect push to='/teamSummary' />;
 
 
     }
     else if (this.state.firstTeamRedirect) {
 
-      return <Redirect push to="/firstTeam" />;
+      return <Redirect push to='/firstTeam' />;
 
 
     }
     else if (this.state.secondTeamRedirect) {
 
-      return <Redirect push to="/secondTeam" />;
+      return <Redirect push to='/secondTeam' />;
 
 
     }
