@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import FirstTeam from './FirstTeam';
-import SecondTeam from './SecondTeam';
-import TeamSummary from './TeamSummary';
-import LandingSider from './LandingSider';
+import FirstTeam from './RoutingExample/FirstTeam';
+import SecondTeam from './RoutingExample/SecondTeam';
+import TeamSummary from './RoutingExample/TeamSummary';
+import LandingSider from './RoutingExample/LandingSider';
 
 function App() {
 
