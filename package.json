@@ -17,6 +17,7 @@
     "@types/styled-components": "^5.1.11",
     "antd": "^4.16.13",
     "axios": "^0.21.1",
+    "chart.js": "^3.5.1",
     "jest-enzyme": "^7.1.2",
     "mdbreact": "^5.1.0",
     "react": "^17.0.1",
