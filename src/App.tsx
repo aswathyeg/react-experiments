@@ -4,6 +4,7 @@ import SecondTeam from './RoutingExample/SecondTeam';
 import TeamSummary from './RoutingExample/TeamSummary';
 import LandingSider from './RoutingExample/LandingSider';
 import { useEffect ,useState} from 'react';
+import DynamicChart from './DynamicChart';
 
 
 
@@ -11,7 +12,7 @@ import { useEffect ,useState} from 'react';
 function App() {
     return (
     <div className="App">
-    
+    <DynamicChart />
      </div>
 
 
