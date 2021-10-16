@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import '../index.css';
 import 'antd/dist/antd.css';
 import { Layout} from 'antd';
-import SiderBar from '../SiderBar';
+import SiderBar from './SiderBar';
 const { Sider } = Layout;
 
 

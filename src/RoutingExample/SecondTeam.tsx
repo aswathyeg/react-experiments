@@ -3,7 +3,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import '../index.css';
 import { Layout } from 'antd';
-import SiderBar from '../SiderBar';
+import SiderBar from './SiderBar';
 
 const { Sider } = Layout;
 export default class secondTeam extends React.Component {
