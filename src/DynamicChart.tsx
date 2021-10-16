@@ -2,13 +2,38 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import { Bar } from 'react-chartjs-2';
 import type * as Chart from 'chart.js';
+//import { LinearTickOptions } from 'chart.tsx';
 
-
-const DynamicChart = (props) => {
+const DynamicChart = () => {
     const [chartData, setChartData] = useState<any>({});
    // React.useState<IProductItem[] | undefined>()
     const [employeeSalary, setEmployeeSalary] = useState([]);
     const [employeeAge, setEmployeeAge] = useState([]);
+
+    const barchartOptions={
+      responsive: true,
+    title: { text: "THICCNESS SCALE", display: true },
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            autoSkip: true,
+            maxTicksLimit: 10,
+            beginAtZero: true,
+            
+          },
+          gridLines: {
+            display: false
+          }
+        }
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            display: false
+          }
+        }
+      ]},}
     const Chart = () => {
         let studentClassId = [];
         let studentsCount = [];
@@ -86,6 +111,7 @@ const DynamicChart = (props) => {
             .catch(err => {
                 console.log(err);
             })
+           // console.log(studentClassId,studentsCount)
     }
     useEffect(() => {
         Chart();
@@ -95,20 +121,10 @@ const DynamicChart = (props) => {
         <div>
             <h1>Bar Chart</h1>
             <div>
-                <Bar
-                    data={chartData}
-                    options={{
-                        responsive: true,
-                        //title: { text: "THICCNESS SCALE", display: true },
-                        scales: {
-                            yAxes: {
-                                ticks: {
-                                   // beginAtZero: true
-                                }
-                            }
-                        }
-                    }}
-                />
+              {typeof chartData!=='undefined'&& chartData.length!== 0 ? 
+                <Bar type="bar" data={chartData} options={barchartOptions} height={300}/>
+                                
+                :""}
             </div>
         </div>
     )
