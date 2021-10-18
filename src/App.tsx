@@ -3,16 +3,18 @@ import FirstTeam from './RoutingExample/FirstTeam';
 import SecondTeam from './RoutingExample/SecondTeam';
 import TeamSummary from './RoutingExample/TeamSummary';
 import LandingSider from './RoutingExample/LandingSider';
-import { useEffect ,useState} from 'react';
-import DynamicChart from './DynamicChart';
+import React, { useEffect ,useState} from 'react';
+import BarChart from './components/BarChart'
 
+import Chart from './components/Chart'
+import DynamicChart from './DynamicChart';
 
 
       
 function App() {
     return (
     <div className="App">
-    <DynamicChart />
+    <DynamicChart/>
      </div>
 
 
