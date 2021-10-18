@@ -8,13 +8,14 @@ import BarChart from './components/BarChart'
 
 import Chart from './components/Chart'
 import DynamicChart from './DynamicChart';
+import ApiExample from './api-example/ApiExample';
 
 
       
 function App() {
     return (
     <div className="App">
-    <DynamicChart/>
+    <ApiExample/>
      </div>
 
 
