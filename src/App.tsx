@@ -4,7 +4,7 @@ import SecondTeam from './RoutingExample/SecondTeam';
 import TeamSummary from './RoutingExample/TeamSummary';
 import LandingSider from './RoutingExample/LandingSider';
 import React, { useEffect ,useState} from 'react';
-import BarChart from './components/BarChart'
+import BarChart from './api-example/BarChart'
 
 import Chart from './components/Chart'
 import DynamicChart from './DynamicChart';
@@ -15,7 +15,7 @@ import ApiExample from './api-example/ApiExample';
 function App() {
     return (
     <div className="App">
-    <ApiExample/>
+    <BarChart/>
      </div>
 
 
