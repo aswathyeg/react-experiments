@@ -1,9 +1,9 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
-import { MDBPagination, MDBPaginationItem, MDBPaginationLink } from 'mdb-react-ui-kit';
+import React, { useEffect, useState } from "react"
+import { MDBPagination, MDBPaginationItem, MDBPaginationLink, MDBTable, MDBTableBody, MDBTableHead } from 'mdb-react-ui-kit';
 
 export default function Table(){
-    const [list,setList]=useState({})
+    const [list,setList]=useState<any[]>([]);
 
   const requestOptions = {
         method: 'GET',
@@ -23,7 +23,14 @@ export default function Table(){
        .then(async response=>{
         const data=await response.json();
         console.log(data);
-        setList(data.data)   
+        if(response.ok){
+          console.log("render classes")
+          setList(data)
+          console.log("list:", list)
+      }
+      else {
+          console.log("failed rendering classes")
+      }
      
 })
 .catch(error => {
@@ -37,19 +44,34 @@ export default function Table(){
 
 <MDBTableHead className="tableHead">
 
-  <tr>
-    <th>Class_id</th>
-    <th>Standard</th>
-    <th>Division</th>
-    <th>Strength</th>
-    <th>Class_teacher_id</th>
-    <th>Class_teacher_name</th>
-  </tr>
+<tr>
+          <th>userId</th>
+          <th>id</th>
+          <th>title</th>
+          <th>completed</th>
+         
+        </tr>
 </MDBTableHead>
 
 
 <MDBTableBody>
+  {list.map(item=>{return(
+    <tr>
+    <td>{item.userId}</td>
+    <td>{item.id}</td>
+    <td>{item.title}</td>
+    <td>{item.completed}</td>
+    
+  </tr>
 
-        </div>
-    )
-}
+  )
+
+  })}
+  </MDBTableBody>
+      
+      </MDBTable>
+        
+          </div>
+      )
+  
+  }
