@@ -7,7 +7,7 @@ import React, { useEffect ,useState} from 'react';
 import BarChart from './api-example/BarChart'
 
 import Chart from './components/Chart'
-import DynamicChart from './DynamicChart';
+
 import ApiExample from './api-example/ApiExample';
 import Table from './Table';
 
