@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { MDBPagination, MDBPaginationItem, MDBPaginationLink } from 'mdb-react-ui-kit';
 
 export default function Table(){
     const [list,setList]=useState({})
@@ -22,8 +23,8 @@ export default function Table(){
        .then(async response=>{
         const data=await response.json();
         console.log(data);
-    
-        
+        setList(data.data)   
+     
 })
 .catch(error => {
     console.error('There was an error!', error);
@@ -32,7 +33,22 @@ export default function Table(){
     },[])
     return(
         <div>
+<MDBTable>
 
+<MDBTableHead className="tableHead">
+
+  <tr>
+    <th>Class_id</th>
+    <th>Standard</th>
+    <th>Division</th>
+    <th>Strength</th>
+    <th>Class_teacher_id</th>
+    <th>Class_teacher_name</th>
+  </tr>
+</MDBTableHead>
+
+
+<MDBTableBody>
 
         </div>
     )
