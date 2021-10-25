@@ -19,13 +19,20 @@ componentDidMount(){
         this.setState({loading:false})
         // console.log(result.data)
 
+
     }
     getPosts();
 
 }
 render(){
+    const{posts,loading,currentPage,postsPerPage}=this.state;
+    const indexOfLastPost=currentPage*postsPerPage;
+    const indexOfFirstPost=indexOfLastPost-postsPerPage;
+    const currentPosts=posts.slice(indexOfFirstPost,indexOfLastPost);
+    
     return(
-        <div>
+        <div className="container">
+            <h1 className="my-5 text-primary text-center">Pagination</h1>
 
         </div>
     )
