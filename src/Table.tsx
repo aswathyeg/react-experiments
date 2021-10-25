@@ -1,6 +1,6 @@
-import axios from "axios"
+
 import React, { useEffect, useState } from "react"
-import { MDBPagination, MDBPaginationItem, MDBPaginationLink, MDBTable, MDBTableBody, MDBTableHead } from 'mdb-react-ui-kit';
+import { MDBTable, MDBTableBody, MDBTableHead } from 'mdb-react-ui-kit';
 
 export default function Table(){
     const [list,setList]=useState<any[]>([]);
