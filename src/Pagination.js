@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import Posts from './components/Posts';
+import PaginationExample from './components/PaginationExample';
+
 export default class Pagination extends React.Component{
     constructor(props){
     super(props);
@@ -17,8 +19,9 @@ componentDidMount(){
     const getPosts=async()=>{
         this.setState({loading:true})
         const result=await axios.get('https://jsonplaceholder.typicode.com/posts');
+        this.setState({posts:result.data})
         this.setState({loading:false})
-        // console.log(result.data)
+        console.log(result.data)
 
 
     }
@@ -34,7 +37,9 @@ render(){
     return(
         <div className="container">
             <h1 className="my-5 text-primary text-center">Pagination</h1>
+
             <Posts posts={currentPosts} loading={loading}/>
+            <PaginationExample postsPerPage ={postsPerPage} totalPosts={posts.length} />
 
         </div>
     )
