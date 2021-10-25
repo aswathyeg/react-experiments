@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Posts from './components/Posts';
 export default class Pagination extends React.Component{
     constructor(props){
     super(props);
@@ -29,10 +30,11 @@ render(){
     const indexOfLastPost=currentPage*postsPerPage;
     const indexOfFirstPost=indexOfLastPost-postsPerPage;
     const currentPosts=posts.slice(indexOfFirstPost,indexOfLastPost);
-    
+
     return(
         <div className="container">
             <h1 className="my-5 text-primary text-center">Pagination</h1>
+            <Posts posts={currentPosts} loading={loading}/>
 
         </div>
     )
