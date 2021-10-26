@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoList from './TodoList';
 const list=[
     {
         id:1,
@@ -8,7 +9,7 @@ const list=[
     },
     {
         id:2,
-        text:'Learn REdux',
+        text:'Learn Redux',
         completed:false
     },
     {
@@ -19,7 +20,7 @@ const list=[
 ];
 let title='Things to do';
 
-function MainList(){
+export default function MainList(){
     
         return(
             <div>
