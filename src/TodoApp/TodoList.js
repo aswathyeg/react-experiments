@@ -1,10 +1,11 @@
 import React from 'react';
+import Header from './Header';
 export default function TodoList(props){
     const  {title,list}=props
     
         return(
             <div  className="todolist">
-                <h1>{title.toUpperCase()}</h1>
+                <Header />
 
                 <ul className="list-unstyled">
 {list.map(item=>(
