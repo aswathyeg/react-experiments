@@ -19,13 +19,13 @@ const list=[
 ];
 let title='Things to do';
 
-export default class MaiList extends React.Component{
-    render(){
+function MainList(){
+    
         return(
             <div>
                 <TodoList title={title} list={list}/>
             </div>
         )
-    }
+    
 
 }
