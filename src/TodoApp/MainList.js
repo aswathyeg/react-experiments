@@ -35,10 +35,27 @@ render(){
         return(
             <div className="container">
                 <div className="raw">
-                <TodoList title={title} list={this.state.list}/>
+                <TodoList title={title} list={this.state.list}
+                addNewItem={this.addNewItem.bind(this)}
+                list={this.state.list}
+               />
                 </div>
             </div>
         )
     
+        };
+        addNewItem(text){
+            updatedIndex=this.state.list.legth+1;
+            let item={
+                id:updatedIndex,
+                text:text
+            
+            };
+            let updatedList=this.state.list.concat([item]);
+            this.setState({
+                list:updatedList
+            })
+
         }
+        
 }
