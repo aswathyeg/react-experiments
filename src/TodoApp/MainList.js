@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TodoList from './TodoList';
-const list=[
+
+export default class MainList extends Component{
+    constructor(){
+        super();
+        this.state={
+    
+ list:[
     {
         id:1,
         text:'Learn Context',
@@ -17,16 +23,22 @@ const list=[
         text:'Learn Callback',
         completed:false
     }
-];
-let title='Things to do';
+]
 
-export default function MainList(){
+        }}
+
+render(){
+
+    let title='Things to do'
+
     
         return(
-            <div>
-                <TodoList title={title} list={list}/>
+            <div className="container">
+                <div className="raw">
+                <TodoList title={title} list={this.state.list}/>
+                </div>
             </div>
         )
     
-
+        }
 }
