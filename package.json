@@ -19,6 +19,7 @@
     "axios": "^0.21.4",
     "chart.js": "^3.5.1",
     "jest-enzyme": "^7.1.2",
+    "keycode": "^2.2.0",
     "keycode-js": "^3.1.0",
     "mdb-react-ui-kit": "^1.5.0",
     "mdbreact": "^5.1.0",
