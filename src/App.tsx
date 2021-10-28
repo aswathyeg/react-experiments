@@ -1,21 +1,12 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import FirstTeam from './RoutingExample/FirstTeam';
-import SecondTeam from './RoutingExample/SecondTeam';
-import TeamSummary from './RoutingExample/TeamSummary';
-import LandingSider from './RoutingExample/LandingSider';
-import React, { useEffect ,useState} from 'react';
-import BarChart from './components/BarChart'
 
-import Chart from './components/Chart'
-import DynamicChart from './DynamicChart';
-import ApiExample from './api-example/ApiExample';
-
+import  Pagination from './Pagination';
+import  MainList from './TodoApp/MainList';
 
       
 function App() {
     return (
     <div className="App">
-    <ApiExample/>
+    <MainList/>
      </div>
 
 

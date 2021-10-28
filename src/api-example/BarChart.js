@@ -1,57 +1,35 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
-import type * as Chart from 'chart.js';
-//import { LinearTickOptions } from 'chart.tsx';
 
-const DynamicChart = () => {
-    const [chartData, setChartData] = useState<any>({});
-   // React.useState<IProductItem[] | undefined>()
-    const [employeeSalary, setEmployeeSalary] = useState([]);
-    const [employeeAge, setEmployeeAge] = useState([]);
+export default function BarChart() {
 
-    const barchartOptions={
-      responsive: true,
-    title: { text: "THICCNESS SCALE", display: true },
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            autoSkip: true,
-            maxTicksLimit: 10,
-            beginAtZero: true,
-            
-          },
-          gridLines: {
-            display: false
-          }
-        }
-      ],
-      xAxes: [
-        {
-          gridLines: {
-            display: false
-          }
-        }
-      ]},}
-    const Chart = () => {
-        let studentClassId = [];
-        let studentsCount = [];
-        
+    const [chartData, setChartData] = useState({
 
-        axios.get("http://localhost:8080/dashboards")
+
+    });
+    
+    useEffect(() => {
+        fetchDashboard();
+
+    }, [])
+
+    const fetchDashboard = async () => {
+        let id = [];
+        let count = [];
+        await axios.get('http://localhost:8080/dashboards')
             .then(res => {
                 console.log(res);
-                for (const dataObj of res.data.data) {
-                    studentClassId.push(parseInt(dataObj.ClassId));
-                    studentsCount.push(parseInt(dataObj.StudentCount));
+                for (const dataObj of res.data) {
+                    id.push(parseInt(dataObj.class_id));
+                    count.push(parseInt(dataObj.student_count));
 
                 }
                 setChartData({
-                    labels: studentClassId,
+                    labels: count,
                     datasets: [{
                         label: 'level of thicceness',
-                        data: studentsCount,
+                        data: id,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -111,23 +89,30 @@ const DynamicChart = () => {
             .catch(err => {
                 console.log(err);
             })
-           // console.log(studentClassId,studentsCount)
-    }
-    useEffect(() => {
-        Chart();
-    }, []);
 
+    }
     return (
-        <div>
+        <div className="App">
             <h1>Bar Chart</h1>
             <div>
-              {typeof chartData!=='undefined'&& chartData.length!== 0 ? 
-                <Bar type="bar" data={chartData} options={barchartOptions} height={300}/>
-                                
-                :""}
+                <Bar
+                    data={chartData}
+                    options={{
+                        responsive: true,
+                        title: { text: "THICCNESS SCALE", display: true },
+                        scales: {
+                            yAxes: {
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    }}
+                />
             </div>
         </div>
     )
+
 }
 
-export default DynamicChart;
+
