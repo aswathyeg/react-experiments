@@ -5,7 +5,7 @@ export default class MainList extends Component{
     constructor(){
         super();
         this.state={
-    
+    filter:'active',
  list:[
     {
         id:1,
@@ -38,6 +38,8 @@ render(){
                 <TodoList title={title} list={this.state.list}
                 addNewItem={this.addNewItem.bind(this)}
                 list={this.state.list}
+                changeFilter={this.changeFilter.bind(this)}
+                {...this.state}
                />
                 </div>
             </div>
@@ -45,7 +47,7 @@ render(){
     
         };
         addNewItem(text){
-            updatedIndex=this.state.list.legth+1;
+            let updatedIndex=this.state.list.legth+1;
             let item={
                 id:updatedIndex,
                 text:text
@@ -57,5 +59,10 @@ render(){
             })
 
         }
+        changeFilter(filter){
+            this.setState({filter})
+
+        }
+
         
 }
