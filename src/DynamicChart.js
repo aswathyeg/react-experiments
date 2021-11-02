@@ -4,9 +4,7 @@ import { Bar } from 'react-chartjs-2'
 
 const DynamicChart = () => {
     const [chartData, setChartData] = useState({});
-    const [employeeSalary, setEmployeeSalary] = useState([]);
-    const [employeeAge, setEmployeeAge] = useState([]);
-
+    
     const Chart = () => {
         let empSal = [];
         let empAge = [];
@@ -14,6 +12,7 @@ const DynamicChart = () => {
         axios.get("http://dummy.restapiexample.com/api/v1/employees")
             .then(res => {
                 console.log(res);
+                
                 for (const dataObj of res.data.data) {
                     empSal.push(parseInt(dataObj.employee_salary));
                     empAge.push(parseInt(dataObj.employee_age));

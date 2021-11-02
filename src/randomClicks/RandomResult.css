@@ -1,0 +1,14 @@
+.heading{
+    text-align:center;
+    padding: 50px;
+    margin: 20px auto; 
+    background-color: aqua;
+}
+.box{
+    text-align:center;
+    padding :20px
+}
+.goButton{
+   background-color: rgb(7, 68, 233);
+   
+}

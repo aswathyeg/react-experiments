@@ -1,16 +1,10 @@
-
-import  Pagination from './Pagination';
-import  MainList from './TodoApp/MainList';
-
-      
+import React from 'react';
+import ChartExample from './ChartExample';
 function App() {
-    return (
-    <div className="App">
-    <MainList/>
-     </div>
-
-
-
+  return (
+    <div>
+      <ChartExample />
+    </div>
   )
 }
 
