@@ -1,18 +1,10 @@
-
 import React from 'react';
-import  Pagination from './Pagination';
-import RandomResult from './randomClicks/RandomResult';
-import  MainList from './TodoApp/MainList';
-
-      
+import ChartExample from './ChartExample';
 function App() {
-    return (
-    <div className="App">
-    <RandomResult/>
-     </div>
-
-
-
+  return (
+    <div>
+      <ChartExample />
+    </div>
   )
 }
 
