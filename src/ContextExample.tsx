@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+
 const Context = React.createContext(1);
+
 function Child(props) {
     return (
         <div>
