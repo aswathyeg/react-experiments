@@ -1,31 +1,27 @@
-import React from 'react';
+import {useContext} from 'react';
 import './CodingPractice.css';
-import {BrowserRouter,Switch,Route,Link} from 'react-router-dom';
 
+const Context=React.createContext(1);
+
+function Child(props){
+    return<GrandChild />
+
+}
+function GrandChild(props){
+    const value=useContext(Context)
+    return(
+        <div>{value}</div>
+    )
+    
+}
 
 export default function CodingPractice(){
 
-    const Home=()=>{
-        return(
-        <h2>Home</h2>
-        )
-    }
-    const Page=()=>{
-        return(
-        <h2>Page</h2>
-        )
-    }
+   
     return(
-        
-           <BrowserRouter>
-           <div className="parentdiv">
-<Link to="/">Home</Link>
-<Link to="/page">page</Link>
-<Route exact path="/" component={Home} />
-<Route path="/page" component={Page} />
-
-           </div>
-           </BrowserRouter>
-       
-    )
+    
+   <Context.Provider value={1}>
+        <Child/>
+        </Context.Provider>
+        )
 }
