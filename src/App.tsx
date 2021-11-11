@@ -11,10 +11,11 @@ import Mounting from './Mounting';
 import PersistentDrawerLeft from './PersistentDrawerLeft';
 import SpreadOperator from './SpreadOperator';
 import Table from './Table';
+import PropDrilling from './useContext/PropDrilling';
 function App() {
   return (
     <div>
-      <SpreadOperator />
+      <PropDrilling />
     </div>
   )
 }
