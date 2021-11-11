@@ -9,11 +9,12 @@ import ContextExample from './ContextExample';
 import Home from './customHook/Home';
 import Mounting from './Mounting';
 import PersistentDrawerLeft from './PersistentDrawerLeft';
+import SpreadOperator from './SpreadOperator';
 import Table from './Table';
 function App() {
   return (
     <div>
-      <Home />
+      <SpreadOperator />
     </div>
   )
 }
