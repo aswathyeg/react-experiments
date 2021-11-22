@@ -1,5 +1,6 @@
 import React from 'react';
 import PostExample from './api-example/PostExample';
+import ChangeBackground from './ChangeBackground';
 import ChartExample from './ChartExample';
 import CodingPractice from './CodingPractice';
 import Card from './components/Card/Card';
@@ -16,7 +17,7 @@ import PropDrilling from './useContext/PropDrilling';
 function App() {
   return (
     <div>
-      < ContextExample />
+      < ChangeBackground />
     </div>
   )
 }
