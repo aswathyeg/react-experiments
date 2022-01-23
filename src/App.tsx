@@ -17,16 +17,14 @@ import ContextExample from './useContext/ ContextExample';
 import PropDrilling from './useContext/PropDrilling';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Calculator from './Calculator';
+import Positioning from './Postioning';
 function App() {
   return (
-    <BrowserRouter>
+   
     <div>
-      < BasicTabs />
-      <Switch>
-      <Route path="/calculator" component={Calculator}/>
-      </Switch>
+      <Positioning/>
     </div>
-    </BrowserRouter>
+    
   )
 }
 
