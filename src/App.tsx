@@ -12,13 +12,21 @@ import Mounting from './Mounting';
 import PersistentDrawerLeft from './PersistentDrawerLeft';
 import SpreadOperator from './SpreadOperator';
 import Table from './Table';
+import BasicTabs from './Tabs';
 import ContextExample from './useContext/ ContextExample';
 import PropDrilling from './useContext/PropDrilling';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Calculator from './Calculator';
 function App() {
   return (
+    <BrowserRouter>
     <div>
-      < ChangeBackground />
+      < BasicTabs />
+      <Switch>
+      <Route path="/calculator" component={Calculator}/>
+      </Switch>
     </div>
+    </BrowserRouter>
   )
 }
 

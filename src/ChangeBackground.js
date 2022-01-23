@@ -3,7 +3,7 @@ export default function ChangeBackground(){
 const[color,setColor]=useState("red");
 
 const inputValue=(event)=>{
-    setColor(event.target.value);
+   let x= setColor(event.target.value);
 
 }
 
