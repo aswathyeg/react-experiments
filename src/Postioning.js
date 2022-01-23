@@ -3,8 +3,8 @@ import React from 'react';
 export default function Positioning(){
     return(
         <div>
-            <Grid>
-                
+            <Grid container direction="column" alignItems="center" justify="center">
+
             </Grid>
         </div>
     )
