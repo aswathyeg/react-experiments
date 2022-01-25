@@ -18,11 +18,14 @@ import PropDrilling from './useContext/PropDrilling';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Calculator from './Calculator';
 import Positioning from './Postioning';
+import ParentExpences from './Expences/ParentExpences';
+import Counter from './CodingChallenge/Counter';
+import ListExample from './CodingChallenge/ListExample';
 function App() {
   return (
    
     <div>
-      <Positioning/>
+      <ListExample/>
     </div>
     
   )
