@@ -21,11 +21,12 @@ import Positioning from './Postioning';
 import ParentExpences from './Expences/ParentExpences';
 import Counter from './CodingChallenge/Counter';
 import ListExample from './CodingChallenge/ListExample';
+import FetchDataExample from './CodingChallenge/FetchDataExample';
 function App() {
   return (
    
     <div>
-      <ListExample/>
+      <FetchDataExample/>
     </div>
     
   )
