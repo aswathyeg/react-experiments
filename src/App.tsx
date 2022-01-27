@@ -22,11 +22,16 @@ import ParentExpences from './Expences/ParentExpences';
 import Counter from './CodingChallenge/Counter';
 import ListExample from './CodingChallenge/ListExample';
 import FetchDataExample from './CodingChallenge/FetchDataExample';
+import Display from './CodingChallenge/Display';
+import ParentClass from './passingData/ParentClass';
+import ParentFunction from './passingData/ParentFunction';
+import HigherOrderExample from './CodingChallenge/HigherOrderExample';
+
 function App() {
   return (
    
     <div>
-      <FetchDataExample/>
+      <HigherOrderExample/>
     </div>
     
   )
