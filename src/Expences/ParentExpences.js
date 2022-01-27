@@ -26,7 +26,8 @@ export default function ParentExpences(){
         <div>
             <ChildExpences 
             title={expenses[0].title}
-            date={expenses[0].date}/>
+            date={expenses[0].date}
+            month={expenses[0].id}/>
         </div>
     )
 }
