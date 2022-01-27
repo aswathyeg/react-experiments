@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 
-const HigherOrderExample=(component,incrementValue)=>{
+const HigherOrderExample=(Component,incrementValue)=>{
 
-    const Hoc=()=>{
-        const [value,setValue]=useState(0);
+    const HOCFun = () => {
+        const [value, setValue] = useState(0);
         
-       const incrementHandler=()=>{
-        setValue(value+incrementValue);
-       }
-        return <component value={value} incrementHandler={incrementHandler} />
-
-
-    }
-    return Hoc;
-    return(
-        <div></div>
-    )
+        const incrementHandler = () => {
+          setValue(value + incrementValue);
+        };
     
-}
+        return <Component value={value} incrementHandler={incrementHandler} />;
+      };
+    
+      return HOCFun;
+    };
+
 export default HigherOrderExample;
