@@ -1,0 +1,42 @@
+
+
+.kanban-outer {
+    padding: 100px;
+     
+}
+.kanban-input{
+    padding-left: 20px! important;
+    align-content: center! important;
+}
+.kanban-form{
+    padding-top: 40px;
+    display: "inline" ! important;
+    background-color: blueviolet;
+     min-height: 30vh; 
+    /* min-width: 5vh ! important; */
+    border-radius: 10px! important;
+
+   
+}
+.kanban-add-button{
+    margin-top: 20px;
+    padding-left:500px !important;
+    width: 40rem;
+  
+
+}
+/* .kanban-input{
+    margin-right: 2px ! important;
+} */
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    padding-left: 0px;
+  }
+
+.li-content {
+height: 25px;
+}
