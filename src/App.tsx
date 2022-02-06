@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import KanbanBoard from './KanbanBoard/index.js';
-const title = "Kanban Board";
+import KanbanBoard from './kanbanBoardFunctional/index.js';
+import ChildToParent from './passingData/ChildToParent';
+
+import ParentClass from './passingData/ParentClass';
+import ParentFunction from './passingData/ChildtoParentFunction';
+import Parent from './passingData/ChildtoParentFunction';
+import ParentExpences from './Expences/ParentExpences';
+// const title = "Kanban Board";
 
 class App extends Component {
   render() {
     return (
       <div>
         
-        <KanbanBoard/>
+        <ParentExpences/>
       </div>
     );
   }
