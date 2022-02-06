@@ -1,0 +1,28 @@
+.card {
+    transition: height 0.5s ease-in-out;
+    will-change: height;
+}
+
+.kanban-outer {
+    padding: 100px;
+    
+     
+}
+.kanban-form{
+    display: "inline" ! important;
+}
+/* .kanban-input{
+    margin-right: 2px ! important;
+} */
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    padding-left: 0px;
+  }
+
+.li-content {
+height: 25px;
+}
