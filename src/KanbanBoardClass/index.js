@@ -14,10 +14,9 @@ export default class KanbanBoard extends Component {
       inputValue: ''
     };
     this.stagesNames = ['Backlog', 'To Do', 'Ongoing', 'Done'];
-    this.handleClick=this.handleClick.bind(this);
-    this.handleInput=this.handleInput.bind(this);
+    
   }
-
+  
   render() {
     const { tasks } = this.state;
 
@@ -31,7 +30,8 @@ export default class KanbanBoard extends Component {
     }
    
     const handleInput=(e)=>{
-      this.state.inputValue= e.target.value;
+      // this.state.inputValue=setState(e.target.value);
+      console.log(e.target.value);
 
     }
     const handleClick=()=>{

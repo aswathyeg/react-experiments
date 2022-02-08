@@ -2,10 +2,12 @@ import React from 'react';
 
 export default class ChildToParent extends React.Component{
     
+    
     constructor(props){
         super(props);
+
         this.state={
-            data:null //initialise data
+            data:null ,//initialise data
         }
     }
     parentCallback=(childData)=>{
@@ -13,11 +15,14 @@ export default class ChildToParent extends React.Component{
          
 
     }
+    
     render(){
+        const{data}=this.state;
         
         return(
             <div>
-                <Child parentCallback={this.onTrigger}/>
+                <Child onParentCallback={this.parentCallback}/>
+                {data}
             </div>
     
         )
@@ -25,15 +30,17 @@ export default class ChildToParent extends React.Component{
     
 }
 class Child extends React.Component{
-   render(){
     onTrigger=(event)=>{
-        this.props.parentCallback("Data from child");
+        this.props.onParentCallback("Data from child");
         event.preventDefault();    
     }
-       return(
+     
+   render(){
+       
+      return(
            <div>
                <form onSubmit={this.onTrigger}>
-                   <input type="text"></input>
+                   <input type="submit" value="Submit"></input>
                </form>
 
            </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 import ChildDate from './ChildDate';
 export default function ChildExpences(props) {
-
-    
     return (
         <div>
             <div>
