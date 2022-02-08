@@ -2,11 +2,12 @@ import React from 'react';
 
 export default class ChildToParent extends React.Component{
     
+    
     constructor(props){
         super(props);
 
         this.state={
-            data:null //initialise data
+            data:null ,//initialise data
         }
     }
     parentCallback=(childData)=>{
@@ -14,6 +15,7 @@ export default class ChildToParent extends React.Component{
          
 
     }
+    
     render(){
         const{data}=this.state;
         
