@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import KanbanBoard from './kanbanBoardFunctional/index.js';
@@ -8,18 +8,25 @@ import ParentClass from './passingData/ParentClass';
 import ParentFunction from './passingData/ChildtoParentFunction';
 import Parent from './passingData/ChildtoParentFunction';
 import ParentExpences from './Expences/ParentExpences';
+import LoginComponent from './passingData/modules/login/LoginComponent';
+import UserDetails from './passingData/modules/userDetails/UserDetails';
 // const title = "Kanban Board";
 
-class App extends Component {
-  render() {
+function App () {
+  const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
+
+ 
     return (
       <div>
+        <h3 className="outer">ChildToParent communication</h3>
+        <LoginComponent onSetUserInfo={setUserInfo}/>
         
-        <ParentExpences/>
+        {/* passing data to other child */}
+       <UserDetails userIformation={userInfo}/> 
       </div>
     );
   }
-}
+
 
 
 
