@@ -10,21 +10,25 @@ import Parent from './passingData/ChildtoParentFunction';
 import ParentExpences from './Expences/ParentExpences';
 import LoginComponent from './passingData/modules/login/LoginComponent';
 import UserDetails from './passingData/modules/userDetails/UserDetails';
+import ParentColor from './passingData/ChangeColor/ParentColor';
 // const title = "Kanban Board";
 
 function App () {
-  const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
+  // const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
 
  
     return (
       <div>
-        <h3 className="outer">ChildToParent communication</h3>
-        <LoginComponent onSetUserInfo={setUserInfo}/>
-        
-        {/* passing data to other child */}
-       <UserDetails userIformation={userInfo}/> 
-      </div>
+        <ParentColor/>
+        </div>
     );
+  //       <h3 className="outer">ChildToParent communication</h3>
+  //       <LoginComponent onSetUserInfo={setUserInfo}/>
+        
+  //       {/* passing data to other child */}
+  //      <UserDetails userIformation={userInfo}/> 
+  //    
+  
   }
 
 
