@@ -1,29 +1,39 @@
 import React, { useState } from 'react';
 import "./index.css";
+import UserDetails from './UserDetails/UserDetails';
 const KanbanBoard = () => {
 
-    let [enteredInputValue, setEnteredInputValue] = useState('');
-let[enteredDateValue,setEnteredDateValue]= useState('');
+    let [enteredTitleValue, setEnteredTitleValue] = useState([]);
+    let [enteredDateValue, setEnteredDateValue] = useState([]);
+    let [data,setData]=useState([]);
 
-    const handleInput = (e) => {
+    const handleTitle = (e) => {
 
-        setEnteredInputValue(
+        setEnteredTitleValue(
             e.target.value
         )
 
     }
+    const handleDate = (e) => {
+        setEnteredDateValue(e.target.value)
+
+    }
+    
     const handleClick = (e) => {
         e.preventDefault();// prevent reloading of page
 
-        const inputData = {
+      setData( {
 
-            inputValue: enteredInputValue,
+            title: enteredTitleValue,
             date:new Date(enteredDateValue)
+           
         }
+    
+      )
 
-        console.log(inputData);
-        setEnteredDateValue('');
-        setEnteredInputValue('');
+        //console.log(inputData);
+        // setEnteredDateValue('');
+        // setEnteredTitleValue('');
         // //         
         //         {inputData && inputData.map((i,index)=>{
         //             return(
@@ -35,21 +45,18 @@ let[enteredDateValue,setEnteredDateValue]= useState('');
         //         ) })}
     }
     // console.log('hi');
-const handleDate=(e)=>{
-    setEnteredDateValue(e.target.value)
     
-}
     return (
         <div className="kanban-outer">
             <form className="kanban-form">
                 <div>
                     <div style={{ display: "flex" }}>
-                        <label style={{paddingLeft:"300px"}}>Title</label>
+                        <label style={{ paddingLeft: "300px" }}>Title</label>
                         <input type="text"
 
-                            onChange={handleInput}
-                            value={enteredInputValue}
-                            style={{ marginRight: "20px" ,backgroundColor:"purple"}} />
+                            onChange={handleTitle}
+                            value={enteredTitleValue}
+                            style={{ marginRight: "20px", backgroundColor: "purple" }} />
 
                         <div class="kanban-input">
                             <label>Date</label>
@@ -58,18 +65,19 @@ const handleDate=(e)=>{
                                 max='2022-12-31'
                                 onChange={handleDate}
                                 value={enteredDateValue}
-                                style={{ marginRight: "20px" ,backgroundColor:"purple"}}
+                                style={{ marginRight: "20px", backgroundColor: "purple" }}
                             />
                         </div>
                     </div>
                     <div className="kanban-add-button">
-                    <button 
-                    style={{ marginRight: "20px" ,backgroundColor:"purple"}}
-                    onClick={handleClick}>Add</button>
+                        <button
+                            style={{ marginRight: "20px", backgroundColor: "purple" }}
+                            onClick={handleClick}>Add</button>
                     </div>
 
                 </div>
             </form>
+            <UserDetails data ={data}/>
 
         </div>
 

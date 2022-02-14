@@ -10,21 +10,40 @@ import Parent from './passingData/ChildtoParentFunction';
 import ParentExpences from './Expences/ParentExpences';
 import LoginComponent from './passingData/modules/login/LoginComponent';
 import UserDetails from './passingData/modules/userDetails/UserDetails';
+import ParentColor from './passingData/ChangeColor/ParentColor';
+import FormsFunction from './passingData/FormsData/FormsFunction';
+import AddUsers from './AgeProject/Users/AddUsers';
+import Fetch from'./passingData/fetch/Fetch';
+import Display from './passingData/display/Display';
 // const title = "Kanban Board";
 
 function App () {
-  const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
+  // const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
+const [users,setUsers]= useState([]);
 
+const handleUsers=(uName)=>{ //pass the value from child as an argument
+  setUsers((prevList)=>{
+    return(
+      [...prevList,{username:uName}]
+    )
+  }
+  
+
+  )}
  
     return (
       <div>
-        <h3 className="outer">ChildToParent communication</h3>
-        <LoginComponent onSetUserInfo={setUserInfo}/>
-        
-        {/* passing data to other child */}
-       <UserDetails userIformation={userInfo}/> 
-      </div>
+        <Fetch onCallback={handleUsers}/>
+        <Display userValue={users}/>
+        </div>
     );
+  //       <h3 className="outer">ChildToParent communication</h3>
+  //       <LoginComponent onSetUserInfo={setUserInfo}/>
+        
+  //       {/* passing data to other child */}
+  //      <UserDetails userIformation={userInfo}/> 
+  //    
+  
   }
 
 
