@@ -15,26 +15,30 @@ import FormsFunction from './passingData/FormsData/FormsFunction';
 import AddUsers from './AgeProject/Users/AddUsers';
 import Fetch from'./passingData/fetch/Fetch';
 import Display from './passingData/display/Display';
+import CounterReducer from './useHooks/CounterReducer';
+import ReducerForm from './useHooks/ReducerForm';
+import Toggling from './useHooks/Toggling';
 // const title = "Kanban Board";
 
 function App () {
   // const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
-const [users,setUsers]= useState([]);
+// const [users,setUsers]= useState([]);
 
-const handleUsers=(uName)=>{ //pass the value from child as an argument
-  setUsers((prevList)=>{
-    return(
-      [...prevList,{username:uName}]
-    )
-  }
+// const handleUsers=(uName)=>{ //pass the value from child as an argument
+//   setUsers((prevList)=>{
+//     return(
+//       [...prevList,{username:uName}]
+//     )
+//   }
   
 
-  )}
+//   )}
  
     return (
       <div>
-        <Fetch onCallback={handleUsers}/>
-        <Display userValue={users}/>
+        <Toggling/>
+        {/* <Fetch onCallback={handleUsers}/>
+        <Display userValue={users}/> */}
         </div>
     );
   //       <h3 className="outer">ChildToParent communication</h3>
