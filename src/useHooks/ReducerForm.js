@@ -44,7 +44,8 @@ const ReducerForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setName('');
-        dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name } });
+        dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name } });// this payload.name will goes to reducer
+
 
 
     }

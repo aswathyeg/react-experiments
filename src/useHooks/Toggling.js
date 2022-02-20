@@ -1,58 +1,67 @@
 
 import React, { useState,useReducer } from 'react';
 import Details from'./Details';
+
 export const ACTIONS={
     ADD:'add',
-    UPDATE:'update',
+    TOGGLE:'toggle',
     DELETE:'delete'
 }
 
 function reducer( state,action){
     switch(action.type){
         case ACTIONS.ADD:
-            return [...state,newText(action.payload.text)]
-            // case ACTIONS.UPDATE:
-            //     return
-            //     case ACTIONS.DELETE:
-            //         return
+            return[...state,newName(action.payload.name)]
 
+            case ACTIONS.TOGGLE:
+             
+                return state.map(details=>{
+                    if(details.id===(action.payload.id)){//checking the clicked id is same as inpt id
+                    return {...details,complete:!details.complete}
+                    }
+                    return details
+
+                })
+                case ACTIONS.DELETE:
+                    return state.filter(details=>details.id!=action.payload.id)
+                    default:
+                        return state
     }
 
 
 }
- function newText(text){
-    return { id: Date.now(), text: text}     
+ function newName(name){
+     return{id:Date.now(),name:name,complete:false}
 
  }
 
 const Toggling = () => {
     const [state, dispatch] = useReducer(reducer,[]);
-    const [text,setText]=useState('');
+    const [name,setName]=useState('');
 
     const handleChange=(e)=>{
-        setText(e.target.value);
+        setName(e.target.value);
         
 
     }
     const handleSubmit=(e)=>{
-        e.preventDefault();
-        setText('');
-        dispatch({type:ACTIONS.ADD,payload:{text:text}}) // this payload.text will goes to reducer
-
+        e.preventDefault();//prevent page refreshing
+        setName(''); //clear field after rendering
+        dispatch({type:ACTIONS.ADD,payload:{name:name}})
+        
 
     }
    
 console.log(state);
     return(
         <div>
-    <form onSubmit={handleSubmit}>
-        <input type="text" value={text}
-        onChange={handleChange}/>
-      
-    </form>
-   {state.map(details=>{
-       return(<Details key={details.id}  details={details} />)
-   })}
+  <form onSubmit={handleSubmit}>
+      <input type="text" value={name} 
+      onChange={handleChange}/>
+  </form>
+  {state.map(details=>{
+      return(<Details key={details.id} details={details} dispatch={dispatch}/>
+  )})}
         </div>
     ) 
 }
