@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import './useContexExample/index.css';
 
 import KanbanBoard from './kanbanBoardFunctional/index.js';
 import ChildToParent from './passingData/ChildToParent';
@@ -18,6 +19,9 @@ import Display from './passingData/display/Display';
 import CounterReducer from './useHooks/CounterReducer';
 import ReducerForm from './useHooks/ReducerForm';
 import Toggling from './useHooks/Toggling';
+import Navbar from './useContexExample/Navbar';
+import Booklist from './useContexExample/Booklist';
+import ThemeContext  from './useContexExample/contexts/ThemeContext';
 // const title = "Kanban Board";
 
 function App () {
@@ -35,10 +39,13 @@ function App () {
 //   )}
  
     return (
-      <div>
-        <Toggling/>
+      <div className="App">
+        <ThemeContext>
+        <Navbar/>
+        <Booklist/>
         {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
+        </ThemeContext>
         </div>
     );
   //       <h3 className="outer">ChildToParent communication</h3>
