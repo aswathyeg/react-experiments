@@ -2,9 +2,12 @@
     max-width: 400px;
     margin: 30px auto;
     text-align: center;
+   
 }
 nav{
     padding: 5px;
+    /* border-radius: 10px!important; */
+
 }
 nav ul{
     padding: 0;
@@ -17,6 +20,8 @@ nav ul li{
 .book-list{
     padding: 20px;
     margin-bottom: 20px;
+    /* border-radius: 10px!important; */
+
 }
 .book-list ul{
     padding: 0;
