@@ -22,6 +22,7 @@ import Toggling from './useHooks/Toggling';
 import Navbar from './useContexExample/Navbar';
 import Booklist from './useContexExample/Booklist';
 import ThemeContext  from './useContexExample/contexts/ThemeContext';
+import ThemeToggle from './useContexExample/ThemeToggle';
 // const title = "Kanban Board";
 
 function App () {
@@ -43,6 +44,7 @@ function App () {
         <ThemeContext>
         <Navbar/>
         <Booklist/>
+        <ThemeToggle/>
         {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
         </ThemeContext>
