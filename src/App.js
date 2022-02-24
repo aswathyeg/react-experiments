@@ -21,8 +21,9 @@ import ReducerForm from './useHooks/ReducerForm';
 import Toggling from './useHooks/Toggling';
 import Navbar from './useContexExample/Navbar';
 import Booklist from './useContexExample/Booklist';
-import ThemeContext  from './useContexExample/contexts/ThemeContext';
+import ThemeContextProvider  from './useContexExample/contexts/ThemeContext';
 import ThemeToggle from './useContexExample/ThemeToggle';
+import AuthContextProvider from './useContexExample/contexts/AuthContext';
 // const title = "Kanban Board";
 
 function App () {
@@ -41,13 +42,15 @@ function App () {
  
     return (
       <div className="App">
-        <ThemeContext>
+        <ThemeContextProvider>
+        <AuthContextProvider>
         <Navbar/>
         <Booklist/>
+        </AuthContextProvider>
         <ThemeToggle/>
         {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
-        </ThemeContext>
+        </ThemeContextProvider>
         </div>
     );
   //       <h3 className="outer">ChildToParent communication</h3>
