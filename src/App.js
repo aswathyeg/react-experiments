@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import './useContexExample/index.css';
+import './useContextExample/index.css';
 
 import KanbanBoard from './kanbanBoardFunctional/index.js';
 import ChildToParent from './passingData/ChildToParent';
@@ -19,11 +19,15 @@ import Display from './passingData/display/Display';
 import CounterReducer from './useHooks/CounterReducer';
 import ReducerForm from './useHooks/ReducerForm';
 import Toggling from './useHooks/Toggling';
-import Navbar from './useContexExample/Navbar';
-import Booklist from './useContexExample/Booklist';
-import ThemeContextProvider  from './useContexExample/contexts/ThemeContext';
-import ThemeToggle from './useContexExample/ThemeToggle';
-import AuthContextProvider from './useContexExample/contexts/AuthContext';
+import Navbar from './useContextExample/Navbar';
+import Booklist from './useContextExample/Booklist';
+import ThemeContextProvider  from './useContextExample/contexts/ThemeContext';
+import ThemeToggle from './useContextExample/ThemeToggle';
+//import AuthContextProvider from './useContextExample/contexts/AuthContext';
+import ChangeTheme from './contextExperiment/contexts/changeTheme';
+import ItemList from './contextExperiment/ItemList';
+import Auth from './contextExperiment/contexts/Auth';
+import Header from './contextExperiment/Header';
 // const title = "Kanban Board";
 
 function App () {
@@ -42,15 +46,21 @@ function App () {
  
     return (
       <div className="App">
-        <ThemeContextProvider>
+        {/* <ThemeContextProvider>
         <AuthContextProvider>
         <Navbar/>
         <Booklist/>
         </AuthContextProvider>
-        <ThemeToggle/>
+        <ThemeToggle/> */}
         {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
-        </ThemeContextProvider>
+        {/* </ThemeContextProvider> */}
+        <ChangeTheme>
+          <Auth>
+            <Header/>
+            <ItemList/>
+          </Auth>
+        </ChangeTheme>
         </div>
     );
   //       <h3 className="outer">ChildToParent communication</h3>
