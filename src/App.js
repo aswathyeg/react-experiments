@@ -24,11 +24,8 @@ import Booklist from './useContextExample/Booklist';
 import ThemeContextProvider from './useContextExample/contexts/ThemeContext';
 import ThemeToggle from './useContextExample/ThemeToggle';
 //import AuthContextProvider from './useContextExample/contexts/AuthContext';
-import ChangeTheme from './contextExperiment/contexts/changeTheme';
-import ItemList from './contextExperiment/ItemList';
-import Auth from './contextExperiment/contexts/Auth';
-import Header from './contextExperiment/Header';
-import  ToggleButton from './contextExperiment/ToggleButton';
+
+import Counter from './useHooks/Counter';
 // const title = "Kanban Board";
 
 function App() {
@@ -52,17 +49,12 @@ function App() {
         <Navbar/>
         <Booklist/>
         </AuthContextProvider>
-        <ThemeToggle/> */}
+        <ThemeToggle/> 
+        </ThemeContextProvider> */}
       {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
-      {/* </ThemeContextProvider> */}
-      <ChangeTheme>
-        <Auth>
-          <Header />
-          <ItemList />
-        </Auth>
-        <ToggleButton />
-      </ChangeTheme>
+     
+      <Counter/>
     </div>
   );
   //       <h3 className="outer">ChildToParent communication</h3>
