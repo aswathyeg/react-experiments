@@ -2,7 +2,7 @@ import React, { createContext } from 'react';
 export const AuthContext=createContext();
 class AuthContextProvider extends React.Component{
    state={
-       isAuthenticated:true
+       isAuthenticated:false
 
    }
    isToggle=()=>{

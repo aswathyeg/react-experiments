@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import './useContexExample/index.css';
+import './useContextExample/index.css';
 
 import KanbanBoard from './kanbanBoardFunctional/index.js';
 import ChildToParent from './passingData/ChildToParent';
@@ -14,53 +14,57 @@ import UserDetails from './passingData/modules/userDetails/UserDetails';
 import ParentColor from './passingData/ChangeColor/ParentColor';
 import FormsFunction from './passingData/FormsData/FormsFunction';
 import AddUsers from './AgeProject/Users/AddUsers';
-import Fetch from'./passingData/fetch/Fetch';
+import Fetch from './passingData/fetch/Fetch';
 import Display from './passingData/display/Display';
 import CounterReducer from './useHooks/CounterReducer';
 import ReducerForm from './useHooks/ReducerForm';
 import Toggling from './useHooks/Toggling';
-import Navbar from './useContexExample/Navbar';
-import Booklist from './useContexExample/Booklist';
-import ThemeContextProvider  from './useContexExample/contexts/ThemeContext';
-import ThemeToggle from './useContexExample/ThemeToggle';
-import AuthContextProvider from './useContexExample/contexts/AuthContext';
+import Navbar from './useContextExample/Navbar';
+import Booklist from './useContextExample/Booklist';
+import ThemeContextProvider from './useContextExample/contexts/ThemeContext';
+import ThemeToggle from './useContextExample/ThemeToggle';
+//import AuthContextProvider from './useContextExample/contexts/AuthContext';
+
+import Todos from './useHooks/Todos';
 // const title = "Kanban Board";
 
-function App () {
+function App() {
   // const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
-// const [users,setUsers]= useState([]);
+  // const [users,setUsers]= useState([]);
 
-// const handleUsers=(uName)=>{ //pass the value from child as an argument
-//   setUsers((prevList)=>{
-//     return(
-//       [...prevList,{username:uName}]
-//     )
-//   }
-  
+  // const handleUsers=(uName)=>{ //pass the value from child as an argument
+  //   setUsers((prevList)=>{
+  //     return(
+  //       [...prevList,{username:uName}]
+  //     )
+  //   }
 
-//   )}
- 
-    return (
-      <div className="App">
-        <ThemeContextProvider>
+
+  //   )}
+
+  return (
+    <div className="App">
+      {/* <ThemeContextProvider>
         <AuthContextProvider>
         <Navbar/>
         <Booklist/>
         </AuthContextProvider>
-        <ThemeToggle/>
-        {/* <Fetch onCallback={handleUsers}/>
+        <ThemeToggle/> 
+        </ThemeContextProvider> */}
+      {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
-        </ThemeContextProvider>
-        </div>
-    );
+     
+      <Todos/>
+    </div>
+  );
   //       <h3 className="outer">ChildToParent communication</h3>
   //       <LoginComponent onSetUserInfo={setUserInfo}/>
-        
+
   //       {/* passing data to other child */}
   //      <UserDetails userIformation={userInfo}/> 
   //    
-  
-  }
+
+}
 
 
 
@@ -76,38 +80,38 @@ function App () {
 
 
 // function App() {
-  //const [state,setState]=useState("VOTE");
-  // const [count,setCount]=useState(0);
+//const [state,setState]=useState("VOTE");
+// const [count,setCount]=useState(0);
 
-  // const setSorted=(state)=>{
-  //   setState(state);
+// const setSorted=(state)=>{
+//   setState(state);
 
-  // }
-  // const handleSort=()=>{
-  
-  // }
-  // const expences = [
-  //   {
-  //     id: 1,
-  //     item: 'flowers',
-  //     date: new Date(2021, 5, 12)
+// }
+// const handleSort=()=>{
 
-  //   },
-  //   {
-  //     id: 2,
-  //     item: 'pen',
-  //     date: new Date(2021, 6, 11)
+// }
+// const expences = [
+//   {
+//     id: 1,
+//     item: 'flowers',
+//     date: new Date(2021, 5, 12)
 
-  //   },
-  //   {
-  //     id: 3,
-  //     item: 'book',
-  //     date: new Date(2021, 7, 10)
+//   },
+//   {
+//     id: 2,
+//     item: 'pen',
+//     date: new Date(2021, 6, 11)
 
-  //   }
+//   },
+//   {
+//     id: 3,
+//     item: 'book',
+//     date: new Date(2021, 7, 10)
+
+//   }
 
 
-  // ]
+// ]
 // const details=[
 //   {
 //     "id": 1,
@@ -230,23 +234,23 @@ function App () {
 
 //   return (
 
-    // < Card className="expencess">
-    //   <NewExpence expenceId={expences[0].id}
-    //     expenceItem={expences[0].item}
-    //     expenceDate={expences[0].date}
-    //   />
-    //   <NewExpence expenceId={expences[1].id}
-    //     expenceItem={expences[1].item}
-    //     expenceDate={expences[1].date}
-    //   />
-    //   <NewExpence expenceId={expences[2].id}
-    //     expenceItem={expences[2].item}
-    //     expenceDate={expences[2].date}
-    //   />
-    // </ Card>
-   
+// < Card className="expencess">
+//   <NewExpence expenceId={expences[0].id}
+//     expenceItem={expences[0].item}
+//     expenceDate={expences[0].date}
+//   />
+//   <NewExpence expenceId={expences[1].id}
+//     expenceItem={expences[1].item}
+//     expenceDate={expences[1].date}
+//   />
+//   <NewExpence expenceId={expences[2].id}
+//     expenceItem={expences[2].item}
+//     expenceDate={expences[2].date}
+//   />
+// </ Card>
+
 //     <div>
-      
+
 //       <DetailsStatic
 //        address={details} 
 //        current={count}
@@ -258,4 +262,4 @@ function App () {
 //   )
 // }
 
- export default App;
+export default App;

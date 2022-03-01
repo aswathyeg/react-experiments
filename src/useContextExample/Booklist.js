@@ -1,3 +1,5 @@
+//accessing context method 1
+
 import React from 'react';
 import { ThemeContext } from './contexts/ThemeContext';
 import './index.css';
