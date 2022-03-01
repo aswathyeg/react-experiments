@@ -25,7 +25,7 @@ import ThemeContextProvider from './useContextExample/contexts/ThemeContext';
 import ThemeToggle from './useContextExample/ThemeToggle';
 //import AuthContextProvider from './useContextExample/contexts/AuthContext';
 
-import Counter from './useHooks/Counter';
+import Todos from './useHooks/Todos';
 // const title = "Kanban Board";
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
       {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
      
-      <Counter/>
+      <Todos/>
     </div>
   );
   //       <h3 className="outer">ChildToParent communication</h3>
