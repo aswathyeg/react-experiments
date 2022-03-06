@@ -1,32 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import './useContextExample/index.css';
+import StringExample from './Strings/StringAdd';
 
-import KanbanBoard from './kanbanBoardFunctional/index.js';
-import ChildToParent from './passingData/ChildToParent';
-
-import ParentClass from './passingData/ParentClass';
-import ParentFunction from './passingData/ChildtoParentFunction';
-import Parent from './passingData/ChildtoParentFunction';
-import ParentExpences from './Expences/ParentExpences';
-import LoginComponent from './passingData/modules/login/LoginComponent';
-import UserDetails from './passingData/modules/userDetails/UserDetails';
-import ParentColor from './passingData/ChangeColor/ParentColor';
-import FormsFunction from './passingData/FormsData/FormsFunction';
-import AddUsers from './AgeProject/Users/AddUsers';
-import Fetch from './passingData/fetch/Fetch';
-import Display from './passingData/display/Display';
-import CounterReducer from './useHooks/CounterReducer';
-import ReducerForm from './useHooks/ReducerForm';
-import Toggling from './useHooks/Toggling';
-import Navbar from './useContextExample/Navbar';
-import Booklist from './useContextExample/Booklist';
-import ThemeContextProvider from './useContextExample/contexts/ThemeContext';
-import ThemeToggle from './useContextExample/ThemeToggle';
-//import AuthContextProvider from './useContextExample/contexts/AuthContext';
-
-import Todos from './useHooks/Todos';
-// const title = "Kanban Board";
 
 function App() {
   // const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
@@ -54,7 +30,7 @@ function App() {
       {/* <Fetch onCallback={handleUsers}/>
         <Display userValue={users}/> */}
      
-      <Todos/>
+      <StringExample/>
     </div>
   );
   //       <h3 className="outer">ChildToParent communication</h3>

@@ -1,5 +1,5 @@
 import React from 'react';
-export default function Togglecolor (){
+export default function Display(props){
     return(
         <div>
             
