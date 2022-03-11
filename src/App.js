@@ -1,36 +1,22 @@
 import React, { useState } from 'react';
 import './App.css';
 import './useContextExample/index.css';
-import StringExample from './Strings/StringAdd';
+import StringAdd from './Strings/Users/StringAdd';
+import Display from './Strings/Users/Display';
 
 
 function App() {
-  // const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
-  // const [users,setUsers]= useState([]);
-
-  // const handleUsers=(uName)=>{ //pass the value from child as an argument
-  //   setUsers((prevList)=>{
-  //     return(
-  //       [...prevList,{username:uName}]
-  //     )
-  //   }
-
-
-  //   )}
-
-  return (
+  const [value,setValue]=useState([])
+  const callBackClick=(uName)=>{
+    setValue((prevName)=>{ return [...prevName,{name:uName,id:Math.random().toString}]})
+      
+ }
+    return (
     <div className="App">
-      {/* <ThemeContextProvider>
-        <AuthContextProvider>
-        <Navbar/>
-        <Booklist/>
-        </AuthContextProvider>
-        <ThemeToggle/> 
-        </ThemeContextProvider> */}
-      {/* <Fetch onCallback={handleUsers}/>
-        <Display userValue={users}/> */}
+
      
-      <StringExample/>
+      <StringAdd callBackClick={callBackClick}/>
+      <Display value={value}/>
     </div>
   );
   //       <h3 className="outer">ChildToParent communication</h3>
@@ -41,18 +27,6 @@ function App() {
   //    
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // function App() {
