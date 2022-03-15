@@ -3,20 +3,20 @@ import './App.css';
 import './useContextExample/index.css';
 import StringAdd from './Strings/Users/StringAdd';
 import Display from './Strings/Users/Display';
-
+import Users from'./stateInClass/Users';
 
 function App() {
-  const [value,setValue]=useState([])
-  const callBackClick=(uName)=>{
-    setValue((prevName)=>{ return [...prevName,{name:uName,id:Math.random().toString}]})
+//   const [value,setValue]=useState([])
+//   const callBackClick=(uName)=>{
+//     setValue((prevName)=>{ return [...prevName,{name:uName,id:Math.random().toString}]})
       
- }
+//  }
     return (
     <div className="App">
 
-     
-      <StringAdd callBackClick={callBackClick}/>
-      <Display value={value}/>
+     <Users/>
+      {/* <StringAdd callBackClick={callBackClick}/>
+      <Display value={value}/> */}
     </div>
   );
   //       <h3 className="outer">ChildToParent communication</h3>
