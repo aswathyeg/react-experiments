@@ -1,60 +1,22 @@
 import React, { useState } from 'react';
 import './App.css';
 import './useContextExample/index.css';
-
-import KanbanBoard from './kanbanBoardFunctional/index.js';
-import ChildToParent from './passingData/ChildToParent';
-
-import ParentClass from './passingData/ParentClass';
-import ParentFunction from './passingData/ChildtoParentFunction';
-import Parent from './passingData/ChildtoParentFunction';
-import ParentExpences from './Expences/ParentExpences';
-import LoginComponent from './passingData/modules/login/LoginComponent';
-import UserDetails from './passingData/modules/userDetails/UserDetails';
-import ParentColor from './passingData/ChangeColor/ParentColor';
-import FormsFunction from './passingData/FormsData/FormsFunction';
-import AddUsers from './AgeProject/Users/AddUsers';
-import Fetch from './passingData/fetch/Fetch';
-import Display from './passingData/display/Display';
-import CounterReducer from './useHooks/CounterReducer';
-import ReducerForm from './useHooks/ReducerForm';
-import Toggling from './useHooks/Toggling';
-import Navbar from './useContextExample/Navbar';
-import Booklist from './useContextExample/Booklist';
-import ThemeContextProvider from './useContextExample/contexts/ThemeContext';
-import ThemeToggle from './useContextExample/ThemeToggle';
-//import AuthContextProvider from './useContextExample/contexts/AuthContext';
-
-import Todos from './useHooks/Todos';
-// const title = "Kanban Board";
+import StringAdd from './Strings/Users/StringAdd';
+import Display from './Strings/Users/Display';
+import UserFinder from'./stateInClass/UserFinder';
 
 function App() {
-  // const [userInfo,setUserInfo]= useState({});//to hold data from loginComponent
-  // const [users,setUsers]= useState([]);
-
-  // const handleUsers=(uName)=>{ //pass the value from child as an argument
-  //   setUsers((prevList)=>{
-  //     return(
-  //       [...prevList,{username:uName}]
-  //     )
-  //   }
-
-
-  //   )}
-
-  return (
+//   const [value,setValue]=useState([])
+//   const callBackClick=(uName)=>{
+//     setValue((prevName)=>{ return [...prevName,{name:uName,id:Math.random().toString}]})
+      
+//  }
+    return (
     <div className="App">
-      {/* <ThemeContextProvider>
-        <AuthContextProvider>
-        <Navbar/>
-        <Booklist/>
-        </AuthContextProvider>
-        <ThemeToggle/> 
-        </ThemeContextProvider> */}
-      {/* <Fetch onCallback={handleUsers}/>
-        <Display userValue={users}/> */}
-     
-      <Todos/>
+
+<UserFinder />
+      {/* <StringAdd callBackClick={callBackClick}/>
+      <Display value={value}/> */}
     </div>
   );
   //       <h3 className="outer">ChildToParent communication</h3>
@@ -65,18 +27,6 @@ function App() {
   //    
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // function App() {
