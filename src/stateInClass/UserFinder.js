@@ -6,32 +6,47 @@ const DUMMY_USERS=[
     {id:3,name:"John"}
 
 ]
-export default function UserFinder (){
-    
-    const [filteredUsers,setFilteredUsers]= useState(DUMMY_USERS);
-    const[searchTerm,setSearchTerm]=useState('');
-    
-    useEffect(()=>{
-        setFilteredUsers(DUMMY_USERS.filter((user)=>
-            user.name.includes(searchTerm))
-        );
+export default class UserFinder extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            searchTerm:'',
+            filteredUsers:DUMMY_USERS
 
-    },[searchTerm]
+        }
 
-    );
-    const handleChange=(e)=>{
+    }
+    
+    // const [filteredUsers,setFilteredUsers]= useState(DUMMY_USERS);
+    // const[searchTerm,setSearchTerm]=useState('');
+    
+componentDidUpdate (prevProps,prevState){
+    if(prevState.searchTerm !== this.state.searchTerm){
+        this.setState({
+            filteredUsers:DUMMY_USERS.filter((user)=>
+            user.name.includes(this.state.searchTerm)
+        ),
+
+
+    });
+}}
+
+
+     handleChange(e){
         e.preventDefault();
-        setSearchTerm(e.target.value);
+        this.setState({searchTerm : e.target.value});
     }
    
-
-        return(
-            <Fragment>
-            <div>
-                <input type="search" onChange={handleChange}/>
-            </div>
-            <Users users={filteredUsers} />
-            </Fragment>
-        )
+render(){
+    return(
+        <Fragment>
+        <div>
+            <input type="search" onChange={this.handleChange.bind(this)}/>
+        </div>
+        <Users users={this.state.filteredUsers} />
+        </Fragment>
+    )
+}
+       
     }
 
