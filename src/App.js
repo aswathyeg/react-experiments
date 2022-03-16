@@ -3,7 +3,7 @@ import './App.css';
 import './useContextExample/index.css';
 import StringAdd from './Strings/Users/StringAdd';
 import Display from './Strings/Users/Display';
-import Users from'./stateInClass/Users';
+import UserFinder from'./stateInClass/UserFinder';
 
 function App() {
 //   const [value,setValue]=useState([])
@@ -14,7 +14,7 @@ function App() {
     return (
     <div className="App">
 
-     <Users/>
+<UserFinder />
       {/* <StringAdd callBackClick={callBackClick}/>
       <Display value={value}/> */}
     </div>
