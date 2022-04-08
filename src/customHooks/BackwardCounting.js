@@ -1,8 +1,21 @@
-import React from 'react';
-const BackwardCounting = () =>{
+import React, { useEffect } from 'react';
+const BackwardCounting = () =>{ 
+    const [counter,setCounter] = useState (0);
+    useEffect(() => {
+        const interval= setInterval (()=>{
+            setCounter((prevState)=>{
+                prevState-1;
+            });
+        },1000)
+        
+            return() => clearInterval(interval);
+
+        },[]);
+    
     return(
         <div>
-            
+
+<Card>{counter}</Card>
         </div>
     )
 
