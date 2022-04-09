@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import Card from './Card';
 const ForwardCounting = () =>{
     const [counter,setCounter] = useState(0);
     useEffect(()=>{
         const interval = setInterval(() => {
-            setCounter((prevState) =>{
-                prevState+1;
-            })     
+            setCounter((prevState) =>
+                prevState+1);
+              
 
         },1000)
         return ()=> clearInterval(interval);
