@@ -4,6 +4,8 @@ import './useContextExample/index.css';
 import StringAdd from './Strings/Users/StringAdd';
 import Display from './Strings/Users/Display';
 import UserFinder from'./stateInClass/UserFinder';
+import ForwardCounting from './customHooks/ForwardCounting';
+import BackwardCounting from './customHooks/BackwardCounting';
 
 function App() {
 //   const [value,setValue]=useState([])
@@ -14,7 +16,8 @@ function App() {
     return (
     <div className="App">
 
-<UserFinder />
+<ForwardCounting/>
+<BackwardCounting/>
       {/* <StringAdd callBackClick={callBackClick}/>
       <Display value={value}/> */}
     </div>
