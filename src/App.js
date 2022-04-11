@@ -1,49 +1,38 @@
 import React, { useState } from 'react';
-import './App.css';
-import './useContextExample/index.css';
-import ForwardCounting from './customHooks/ForwardCounting';
-import BackwardCounting from './customHooks/BackwardCounting';
 import MovieList from './components/sendingHttp/MovieList';
+import './App.css';
 
 function App() {
-  const [movies,setMovies] = useState([]);
-  function fetchMoviesHandler(){
-    
-    fetch('https://swapi.dev/api/films/').
-    then((response) => {
-      return response.json();
+  const [movies, setMovies] = useState([]);
 
-    })
-    .then ((data)=>{
-      const transformedMovies = data.results.map(movieData) => {
-
-        return{
-          id:movieData.episode_id,
-          title:movieData.title,
-          openingText:movieData.opening_crawl,
-          releaseDate:movieData.release_date,
-
-        };
+  function fetchMoviesHandler() {
+    fetch('https://swapi.dev/api/films/')
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const transformedMovies = data.results.map((movieData) => {
+          return {
+            id: movieData.episode_id,
+            title: movieData.title,
+            openingText: movieData.opening_crawl,
+            releaseDate: movieData.release_date,
+          };
+        });
+        setMovies(transformedMovies);
       });
-      setMovies(transformedMovies);
-    });
   }
-  
-  return (
-   <React.Fragment>
-     <section>
-       <button onClick={fetchMoviesHandler}>
-         Fetch movies
-       </button>
-     </section>
-     <section>
-       <MovieList movies={movies}/>
-     </section>
-     
-     </React.Fragment>
-  );
-  
 
+  return (
+    <React.Fragment>
+      <section>
+        <button onClick={fetchMoviesHandler}>Fetch Movies</button>
+      </section>
+      <section>
+        <MovieList movies={movies} />
+      </section>
+    </React.Fragment>
+  );
 }
 
 export default App;
