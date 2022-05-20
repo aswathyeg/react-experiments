@@ -2,82 +2,41 @@ import React, { useState } from 'react';
 import MovieList from './components/sendingHttp/MovieList';
 import './App.css';
 import AddMovie from './components/sendingHttp/AddMovie';
+import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './Expenses/Expenses';
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  const [isLoading,setIsLoading] = useState(false);
-  const [error,setError] = useState(null);
+  const expenses=[
+    {
+      id: 'e1',
+      title: 'Toilet Paper',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
+    },
+  ]
+  const addExpenseHandler=expense=>{
 
-  async function fetchMoviesHandler() {
-    try{
-      setIsLoading(true);
-      setError(null);
-      const response = await fetch('https://react-http-fe6ae-default-rtdb.firebaseio.com/movies.json');
-      if (!response.ok) {
-        throw new Error ('Something went wrong!');
-
-      }
-      const data = await response.json();
-      const loadedMovies = [];
-      for(const key in data) {
-        loadedMovies.push({
-          id : key,
-          title : data[key].title,
-          openingText : data[key].openingText,
-          releaseDate : data[key].releaseDate
-        });
-
-      }
-      
-  
-      // const transformedMovies = data.map((movieData) => {
-      //   return {
-      //     id: movieData.episode_id,
-      //     title: movieData.title,
-      //     openingText: movieData.opening_crawl,
-      //     releaseDate: movieData.release_date,
-      //   };
-      // });
-      setMovies(loadedMovies);
-      setIsLoading(false);
-  
-    }
-    catch (error) {
-setError(error.message);
-     
-    }
-    setIsLoading(false);
   }
-   async function addMovieHandler(movie){
-     const response= await fetch('https://react-http-fe6ae-default-rtdb.firebaseio.com/movies.json',{
-        method : 'POST',
-        body : JSON.stringify(movie),
-        headers : {
-          'Content-Type' : 'application/json'
-        }
-      }
-      );
-      const data = await response.json();
-      //console.log (data);
+ return(
+   <div>
+     <NewExpense onAddExpense={addExpenseHandler}/>
+     <Expenses items={expenses} />
 
-    }
-
-  return (
-    <React.Fragment>
-       <section>
-        <AddMovie onAddMovie={addMovieHandler} />
-      </section>
-      <section>
-        <button onClick={fetchMoviesHandler}>Fetch Movies</button>
-      </section>
-      <section>
-       {!isLoading && movies.length > 0 && <MovieList movies={movies} />} 
-       {!isLoading && movies.length === 0 && !error && <p>Found no movies</p>}
-       {!isLoading && error && <p>{error}</p>}
-       {isLoading && <p>Loading..</p>}
-      </section>
-    </React.Fragment>
-  );
+   </div>
+ )
 }
 
 export default App;
