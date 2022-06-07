@@ -1,34 +1,35 @@
 import React, { useState } from 'react';
-const data=[];
-for(let i=0;i<10;i++){
+const data = [];
+for (let i = 0; i < 10; i++) {
     data.push({
-        number:i,
-        id:"id*i"
+        number: i,
+        id: "id*i"
     });
 }
 
 function Item(props) {
-    return <h1 onClick={()=>{ props.delete(props.id)}}>{props.number}</h1>
+    return <h1 onClick={() => { props.delete(props.id) }}>{props.number}</h1>
 }
-export default function KeyExample(props){ 
-    
+export default function KeyExample(props) {
 
-    const [state,setState]=useState(data);
 
-const deleteNumber=(n)=>{
-    const newData=state.filter(num=>num.id!==n);
-    setState(newData);
+    const [state, setState] = useState(data);
 
-}
+    const deleteNumber = (n) => {
+        const newData = state.filter(num => num.id !== n);
+        setState(newData);
+
+    }
 
 
     return (
         <div>
-{state.map((n,i)=>{
-    return(
-        <Item delete={deleteNumber} key={n.id} id={n.id} number={n.number}/>
-    );
-})}
+            {state.map((n, i) => {
+                return (
+                    <Item delete={deleteNumber} key={n.id} id={n.id} number={n.number} />
+                );
+            })}
         </div>
-    
-    )}
+
+    )
+}
