@@ -4,9 +4,19 @@ import { useEffect, useState } from "react";
 const GenerateList = () => {
 
   const [activityList,setActivityList] =useState([]);
-   const genatateActivity = ( ) =>{
-    const 
+
+   const genatateActivity =  ( ) =>{
+
+    const getActivity = async() =>{
+      const activity = await axios.get ("https://www.boredapi.com/api/activity") ;
+      setActivityList([...activityList,activity.data]);
+
+    }
+    getActivity();
+
+    
    }
+   useEffect(getActivity,[]);
    
     return(
         <div  style={{
