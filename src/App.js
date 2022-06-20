@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import RobotList from "./RobotList";
+import GenerateList from "./GenerateList";
 const App = () => {
-  return <RobotList/>
+  return <GenerateList/>
 };
 
 export default App;
