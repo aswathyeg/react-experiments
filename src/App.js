@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import DeleteApp from "./DeleteApp";
+import TodoApp from "./TodoApp";
 const App = () => {
   
-  return <DeleteApp/>
+  return <TodoApp/>
 };
 
 export default App;
