@@ -1,0 +1,30 @@
+
+body {
+    font-family: sans-serif;
+    margin: 3rem;
+    background-color: #dfdfdf;
+  }
+.appBody{
+    
+    align-items: center;
+    padding :20;
+    width: 10%;
+
+}
+.deleteButton{
+
+    color: aquamarine;
+
+}
+.card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: 20rem;
+    display: "flex";
+        flex-direction: "column";
+        align-items: "center";
+        justify-content: "center";
+        padding: 20;
+  }
