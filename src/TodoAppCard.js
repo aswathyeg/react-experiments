@@ -16,12 +16,13 @@ const TodoAppCard = (props) => {
   return (
     <div className={classes.card}>
       <h1>{props.text}</h1>
-
       <div className={classes.deleteButton}>
         <button onClick={handleDelete}>Delete</button>
-        {state == true && <Overlay />}
-        {state == true && <BackDrop onCancel={handleCancel} />}
       </div>
+      {state == true && (
+        <Overlay onCancel={handleCancel} onConfirm={handleCancel} />
+      )}
+      {/* {state == true && <BackDrop onCancel={handleCancel} />} */}
     </div>
   );
 };
