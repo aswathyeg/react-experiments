@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import UseCounter from "../hooks/UseCounter";
+import useCounter from "../hooks/UseCounter";
 const ForwardCounting = () => {
-  const counter = UseCounter();
+  const counter = useCounter();
 
   return (
     <div>
