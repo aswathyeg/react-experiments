@@ -1,7 +1,7 @@
 //custom hook
 import { useState, useEffect } from "react";
 
-const UseCounter = (forwards = true) => {
+const useCounter = (forwards = true) => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
@@ -16,4 +16,4 @@ const UseCounter = (forwards = true) => {
   }, [forwards]);
   return counter;
 };
-export default UseCounter;
+export default useCounter;
