@@ -4,12 +4,13 @@ import TodoApp from "./TodoApp";
 import UseCounter from "./hooks/UseCounter";
 import ForwardCounting from "./customHooks/ForwardCounting";
 import BackwardCounting from "./customHooks/BackwardCounting";
+import FetchData from "./FetchData";
+import Home from "./customHook/Home";
 const App = () => {
   return (
-    <React.Fragment>
-      <ForwardCounting />
-      <BackwardCounting />
-    </React.Fragment>
+    <div>
+      <Home />
+    </div>
   );
 };
 
