@@ -5,11 +5,11 @@ import UseCounter from "./hooks/UseCounter";
 import ForwardCounting from "./customHooks/ForwardCounting";
 import BackwardCounting from "./customHooks/BackwardCounting";
 import FetchData from "./FetchData";
-import Home from "./customHook/Home";
+import Component1 from "./useContext/ ContextExample";
 const App = () => {
   return (
     <div>
-      <Home />
+      <Component1 />
     </div>
   );
 };
