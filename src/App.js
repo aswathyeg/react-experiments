@@ -5,11 +5,11 @@ import UseCounter from "./hooks/UseCounter";
 import ForwardCounting from "./customHooks/ForwardCounting";
 import BackwardCounting from "./customHooks/BackwardCounting";
 import FetchData from "./FetchData";
-import Component1 from "./useContext/ ContextExample";
+import Practice from "./Practice";
 const App = () => {
   return (
     <div>
-      <Component1 />
+      <Practice />
     </div>
   );
 };
