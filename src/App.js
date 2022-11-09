@@ -5,11 +5,11 @@ import UseCounter from "./hooks/UseCounter";
 import ForwardCounting from "./customHooks/ForwardCounting";
 import BackwardCounting from "./customHooks/BackwardCounting";
 import FetchData from "./FetchData";
-import Home from "./customHook/Home";
+import LifeCycleMethods from "./LifeCycleMethods";
 const App = () => {
   return (
     <div>
-      <Home />
+      <LifeCycleMethods />
     </div>
   );
 };

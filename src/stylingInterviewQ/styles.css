@@ -1,0 +1,29 @@
+/* ways to center div */
+/* css Box model */
+
+body{
+    text-align: center;
+    width: 100%;
+    height:100vh;
+    /* method 2
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+   
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+div{
+background-color: aqua;
+/* method 1
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%); */
+padding:20px;
+margin:20px;
+border:5px solid black;
+width:400px;
+}
