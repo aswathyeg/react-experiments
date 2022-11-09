@@ -1,0 +1,12 @@
+/* ways to center div */
+
+body{
+    text-align: center;
+    width: 100%;
+    height:100vh;
+
+}
+div{
+background-color: aqua;
+
+}
