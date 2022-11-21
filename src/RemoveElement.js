@@ -9,7 +9,10 @@ const RemoveElement = () => {
 
     setVisible(!visible);
   };
-  const handleItems = (index) => {};
+  const handleItems = (index) => {
+    const newItems = fruits.filter((_, c) => c !== index);
+    setFruits(newItems);
+  };
   return (
     <div>
       {visible && <button onClick={handleRemove}>Remove</button>}
