@@ -6,10 +6,12 @@ import ForwardCounting from "./customHooks/ForwardCounting";
 import BackwardCounting from "./customHooks/BackwardCounting";
 import FetchData from "./FetchData";
 import LifeCycleMethods from "./LifeCycleMethods";
+import RemoveElement from "./RemoveElement";
 const App = () => {
   return (
     <div>
-      <LifeCycleMethods />
+      {/* <LifeCycleMethods /> */}
+      <RemoveElement />
     </div>
   );
 };
