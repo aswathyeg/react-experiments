@@ -13,7 +13,7 @@ const App = () => {
     <div>
       {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
-      <RemoveElement />
+      {/* <RemoveElement /> */}
     </div>
   );
 };
