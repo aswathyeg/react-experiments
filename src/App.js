@@ -8,10 +8,12 @@ import FetchData from "./FetchData";
 import LifeCycleMethods from "./LifeCycleMethods";
 import RemoveElement from "./RemoveElement";
 const App = () => {
+  // const [explorerData, setExplorerData] = useState(explorer);
   return (
     <div>
+      {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
-      <RemoveElement />
+      {/* <RemoveElement /> */}
     </div>
   );
 };
