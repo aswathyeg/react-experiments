@@ -7,6 +7,8 @@ import BackwardCounting from "./customHooks/BackwardCounting";
 import FetchData from "./FetchData";
 import LifeCycleMethods from "./LifeCycleMethods";
 import RemoveElement from "./RemoveElement";
+import ChildToParent from "./passingData/ChildToParent";
+import CheckboxExample from "./CheckboxExample";
 const App = () => {
   // const [explorerData, setExplorerData] = useState(explorer);
   return (
@@ -14,6 +16,7 @@ const App = () => {
       {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
       {/* <RemoveElement /> */}
+      <CheckboxExample label="Subscribe?" />
     </div>
   );
 };
