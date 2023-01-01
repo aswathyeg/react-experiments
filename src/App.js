@@ -16,7 +16,13 @@ const App = () => {
       {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
       {/* <RemoveElement /> */}
-      <CheckboxExample label="Subscribe?" />
+      <CheckboxExample label="Subscribe?" checked={true} />
+      <CheckboxExample
+        label="I agree to terms & conditions"
+        checked={true}
+        disabled
+      />
+      <CheckboxExample label="Save form inputs to storage?" />
     </div>
   );
 };
