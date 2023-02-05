@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Props from "./Props";
-
 const CheckboxExample = ({ label, checked, ...props }) => {
   const [isChecked, setIsChecked] = useState(false);
   const handleClick = (e) => {
