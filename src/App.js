@@ -1,14 +1,6 @@
 import React, { useState } from "react";
-import ExpenseForm from "./components/NewExpense/ExpenseForm";
-import TodoApp from "./TodoApp";
-import UseCounter from "./hooks/UseCounter";
-import ForwardCounting from "./customHooks/ForwardCounting";
-import BackwardCounting from "./customHooks/BackwardCounting";
-import FetchData from "./FetchData";
-import LifeCycleMethods from "./LifeCycleMethods";
-import RemoveElement from "./RemoveElement";
-import ChildToParent from "./passingData/ChildToParent";
 import CheckboxExample from "./CheckboxExample";
+import SlideList from "./components/slideShow/SlideList";
 const App = () => {
   // const [explorerData, setExplorerData] = useState(explorer);
   return (
@@ -16,7 +8,14 @@ const App = () => {
       {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
       {/* <RemoveElement /> */}
-      <CheckboxExample label="Subscribe?" />
+      {/* <CheckboxExample label="Subscribe?" checked={true} />
+      <CheckboxExample
+        label="I agree to terms & conditions"
+        checked={true}
+        disabled
+      />
+      <CheckboxExample label="Save form inputs to storage?" /> */}
+      <SlideList />
     </div>
   );
 };
