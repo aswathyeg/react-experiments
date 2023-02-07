@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slides from "./Slides";
 
 const SlideList = () => {
+  const [count, setCount] = useState(0);
+
   const SLIDES = [
     {
       title: "Today's workout plan",
@@ -26,7 +28,15 @@ const SlideList = () => {
   ];
   return (
     <div>
-      <Slides slides={SLIDES} />
+      <Slides
+        slides={SLIDES}
+        restart={() => setCount(0)}
+        previous={() => {
+          setCount(count - 1);
+        }}
+        next={() => setCount(count + 1)}
+        currentSlide={count}
+      />
     </div>
   );
 };
