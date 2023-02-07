@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Slides = ({ slides, restart, previous, next, currentSlide }) => {
-  // useEffect(() => {});
+  // useEffect(() => {}, [{ restart }]);
   return (
     <div>
       <button onClick={previous} disabled={currentSlide === 0}>

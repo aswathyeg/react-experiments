@@ -3,7 +3,7 @@ import Slides from "./Slides";
 
 const SlideList = () => {
   const [count, setCount] = useState(0);
-  useEffect(() => {}, []);
+
   const SLIDES = [
     {
       title: "Today's workout plan",
