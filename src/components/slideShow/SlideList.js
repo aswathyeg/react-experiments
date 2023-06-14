@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slides from "./Slides";
-
+// import "../Navbar.css";
 const SlideList = () => {
   const [count, setCount] = useState(0);
 
@@ -27,7 +27,7 @@ const SlideList = () => {
     },
   ];
   return (
-    <div>
+    <div className="bg">
       <Slides
         slides={SLIDES}
         restart={() => setCount(0)}
