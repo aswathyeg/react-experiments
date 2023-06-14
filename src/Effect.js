@@ -8,7 +8,7 @@ const Effect = () => {
     setTimeout(() => {
       setCount((count) => count + 1);
     }, 1000);
-  }, []);
+  }, []); //empty array for running only on the first render
   return (
     <div>
       <h1>rendered{count} times</h1>
