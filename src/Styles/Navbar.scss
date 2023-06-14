@@ -1,16 +1,18 @@
 @import "../Variables/Variables.scss";
 .navbar{
-    width: 100%;
-    height: 80px;
-    background-color: $bgColour;
-    display: flex;
-    justify-content: flex-end;
+   @include navStyle();
+a{
 
-
-}
-.navbar a {
     text-decoration: none;
     color: $textColour;
     margin: 10px;
     font-family: $textFont;
 }
+
+
+}
+.bg{
+    @include navStyle();
+}
+
+   

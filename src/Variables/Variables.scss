@@ -1,3 +1,11 @@
 $bgColour: rgb(171, 52, 52);
 $textColour: rgb(4, 0, 0);
 $textFont: Arial, Helvetica, sans-serif;
+
+@mixin navStyle{
+    width: 100%;
+    height: 80px;
+    background-color: $bgColour;
+    display: flex;
+    justify-content: flex-end;
+}
