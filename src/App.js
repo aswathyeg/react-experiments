@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import CheckboxExample from "./CheckboxExample";
 import Navbar from "./components/Navbar";
 import SlideList from "./components/slideShow/SlideList";
+import Effect from "./revision/Effect";
 const App = () => {
   // const [explorerData, setExplorerData] = useState(explorer);
   return (
     <div>
-      <Navbar />
+      <Effect />
       {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
       {/* <RemoveElement /> */}
@@ -17,7 +18,6 @@ const App = () => {
         disabled
       />
       <CheckboxExample label="Save form inputs to storage?" /> */}
-      <SlideList />
     </div>
   );
 };
