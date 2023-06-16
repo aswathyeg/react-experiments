@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CheckboxExample from "./CheckboxExample";
 import Navbar from "./components/Navbar";
 import SlideList from "./components/slideShow/SlideList";
-import Effect from "./Effect";
+import Effect from "./revision/Effect";
 const App = () => {
   // const [explorerData, setExplorerData] = useState(explorer);
   return (
