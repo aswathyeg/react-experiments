@@ -3,11 +3,12 @@ import CheckboxExample from "./CheckboxExample";
 import Navbar from "./components/Navbar";
 import SlideList from "./components/slideShow/SlideList";
 import Effect from "./revision/Effect";
+import FetchData from "./revision/FetchData";
 const App = () => {
   // const [explorerData, setExplorerData] = useState(explorer);
   return (
     <div>
-      <Effect />
+      <FetchData />
       {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
       {/* <RemoveElement /> */}
