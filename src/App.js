@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AddMe from "./AddMe";
 import CheckboxExample from "./CheckboxExample";
 import Navbar from "./components/Navbar";
 import SlideList from "./components/slideShow/SlideList";
@@ -8,7 +9,7 @@ const App = () => {
   // const [explorerData, setExplorerData] = useState(explorer);
   return (
     <div>
-      <FetchData />
+      <AddMe />
       {/* <Folder explore={explorerData} /> */}
       {/* <LifeCycleMethods /> */}
       {/* <RemoveElement /> */}
